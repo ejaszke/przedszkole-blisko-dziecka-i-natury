@@ -286,6 +286,19 @@ h1, h2, h3, h4 { font-family: var(--font-h); line-height: 1.2; }
 .hero-blob.white h1  { color: #52B4D3; font-size: 2.6rem; line-height: 1.1; }
 .hero-blob.white h2  { color: #1B46AD; font-size: 1.1rem; font-weight: 600; margin-top: 1rem; display: block; }
 
+.hero-blob.white {
+  max-width: 540px;
+  min-height: 530px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero-blob.white .hero-blob-bg {
+  width: 750px;
+  height: 730px;
+}
+
 .hero-blob.left { align-self: flex-start; margin-top: 2rem; }
 
 /* left-aligned hero content */
