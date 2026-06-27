@@ -910,9 +910,9 @@ textarea.form-control { resize: vertical; min-height: 160px; }
 
 .footer-fox {
   position: absolute;
-  bottom: 0;
+  bottom: -20px;
   right: 20%;
-  height: 160px;
+  height: 210px;
   width: auto;
   display: block;
   pointer-events: none;
