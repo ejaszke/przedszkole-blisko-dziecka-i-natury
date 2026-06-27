@@ -906,7 +906,7 @@ textarea.form-control { resize: vertical; min-height: 160px; }
    ============================================= */
 
 .footer-wave-wrap { line-height: 0; overflow: hidden; }
-.footer-wave-wrap svg { display: block; width: 100%; height: 60px; }
+.footer-wave-wrap svg { display: block; width: 100%; height: 32px; }
 
 .footer {
   background: var(--teal);
