@@ -1015,6 +1015,7 @@ textarea.form-control { resize: vertical; min-height: 160px; }
   .row-content.reverse { flex-direction: column; gap: 0.5rem; }
 
   .col-img { flex: none; align-items: center; width: 100%; }
+  #o-nas .col-img, #adaptacja .col-img { flex: none; width: 100%; }
   .col-img img, .img-circle, .photo-blob { margin: 0 auto; }
   .row-content { align-items: center; }
   .photo-blob-wrap { text-align: center; margin: 0 auto; }
