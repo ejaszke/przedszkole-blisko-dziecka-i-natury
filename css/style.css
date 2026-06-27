@@ -911,8 +911,8 @@ textarea.form-control { resize: vertical; min-height: 160px; }
 .footer-fox {
   position: absolute;
   bottom: 0;
-  right: 5%;
-  height: 110px;
+  right: 20%;
+  height: 160px;
   width: auto;
   display: block;
   pointer-events: none;
