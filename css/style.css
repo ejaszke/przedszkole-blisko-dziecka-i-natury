@@ -436,6 +436,14 @@ h1, h2, h3, h4 { font-family: var(--font-h); line-height: 1.2; }
   margin: 0 auto;
 }
 
+.img-illustration {
+  width: 220px;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+
 .photo-blob {
   width: 430px;
   height: 540px;
