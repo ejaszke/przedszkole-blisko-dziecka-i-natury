@@ -485,6 +485,7 @@ h1, h2, h3, h4 { font-family: var(--font-h); line-height: 1.2; }
 .btn-pink  { background: var(--pink-btn); color: var(--white); }
 .btn-green { background: var(--teal-dark); color: var(--white); }
 .btn-sm    { padding: .55rem 1.6rem; font-size: .9rem; }
+.btn-lg    { padding: 1.2rem 3.2rem; font-size: 1.3rem; }
 
 .btn-row {
   display: flex;
