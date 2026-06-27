@@ -905,8 +905,18 @@ textarea.form-control { resize: vertical; min-height: 160px; }
    FOOTER
    ============================================= */
 
-.footer-wave-wrap { line-height: 0; overflow: hidden; }
-.footer-wave-wrap svg { display: block; width: 100%; height: 32px; }
+.footer-wave-wrap { line-height: 0; overflow: visible; position: relative; }
+.footer-wave-wrap svg { display: block; width: 100%; height: 32px; overflow: hidden; }
+
+.footer-fox {
+  position: absolute;
+  bottom: 0;
+  right: 5%;
+  height: 110px;
+  width: auto;
+  display: block;
+  pointer-events: none;
+}
 
 .footer {
   background: var(--teal);
