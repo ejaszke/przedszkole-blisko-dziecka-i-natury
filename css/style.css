@@ -239,13 +239,13 @@ h1, h2, h3, h4 { font-family: var(--font-h); line-height: 1.2; }
 .hero-blob {
   position: relative;
   z-index: 2;
-  padding: 5.5rem 3.5rem 3rem;
+  padding: 3rem 3.5rem;
   max-width: 450px;
   min-height: 380px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
   text-align: center;
   background: transparent;
 }
@@ -441,6 +441,8 @@ h1, h2, h3, h4 { font-family: var(--font-h); line-height: 1.2; }
 }
 
 .section-title--xl { font-size: 5.5rem; }
+
+.hero-blob--bottom { justify-content: flex-end; padding-top: 5.5rem; }
 
 #o-nas .row-content { align-items: flex-start; }
 #adaptacja .row-content { align-items: flex-start; }
