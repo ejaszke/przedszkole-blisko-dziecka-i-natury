@@ -1012,7 +1012,7 @@ textarea.form-control { resize: vertical; min-height: 160px; }
   .hero-blob h1 { font-size: 1.25rem; }
 
   .row-content,
-  .row-content.reverse { flex-direction: column; gap: 2rem; }
+  .row-content.reverse { flex-direction: column; gap: 0.5rem; }
 
   .col-img { flex: none; align-items: center; width: 100%; }
   .col-img img, .img-circle, .photo-blob { margin: 0 auto; }
