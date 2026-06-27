@@ -437,7 +437,7 @@ h1, h2, h3, h4 { font-family: var(--font-h); line-height: 1.2; }
 }
 
 .img-illustration {
-  width: 160px;
+  width: 80px;
   height: auto;
   object-fit: contain;
   display: block;
