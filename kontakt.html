@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kontakt – Przedszkole Blisko Dziecka i Natury</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css?v=kontakt-hero-2">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
         integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
@@ -188,13 +188,13 @@
       var mapEl = document.getElementById('kontakt-map');
       if (!mapEl || typeof L === 'undefined') return;
       var coords = [50.0501832, 18.7133999];
-      var map = L.map(mapEl, { scrollWheelZoom: false }).setView(coords, 17);
+      var map = L.map(mapEl, { scrollWheelZoom: false }).setView(coords, 18);
       L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
         maxZoom: 19
       }).addTo(map);
       var icon = L.icon({
-        iconUrl: 'assets/tu-jestesmy.svg',
+        iconUrl: 'materialy/kontakt/pinezka.svg',
         iconSize: [64, 64],
         iconAnchor: [32, 60],
         popupAnchor: [0, -56],
