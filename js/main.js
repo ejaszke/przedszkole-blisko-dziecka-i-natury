@@ -199,3 +199,65 @@ initReviews(REVIEWS_CONFIG);
   tabs.forEach(btn => btn.addEventListener('click', () => activate(btn.dataset.target)));
   activate(tabs[0].dataset.target);
 })();
+
+// ============================================================
+// Team photos – enlarged preview
+// ============================================================
+(function () {
+  const photos = document.querySelectorAll('.team-detail-item img');
+  if (!photos.length) return;
+
+  const modal = document.createElement('div');
+  modal.className = 'team-photo-modal';
+  modal.setAttribute('aria-hidden', 'true');
+  modal.innerHTML =
+    '<div class="team-photo-modal__dialog" role="dialog" aria-modal="true" aria-label="Powiększone zdjęcie członkini zespołu">' +
+      '<button class="team-photo-modal__close" type="button" aria-label="Zamknij powiększone zdjęcie">×</button>' +
+      '<img class="team-photo-modal__image" src="" alt="">' +
+    '</div>';
+  document.body.appendChild(modal);
+
+  const dialog = modal.querySelector('.team-photo-modal__dialog');
+  const modalImage = modal.querySelector('.team-photo-modal__image');
+  const closeButton = modal.querySelector('.team-photo-modal__close');
+  let previousFocus = null;
+
+  function closeModal() {
+    modal.classList.remove('is-open');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('team-photo-modal-open');
+    if (previousFocus) previousFocus.focus();
+  }
+
+  function openModal(photo) {
+    previousFocus = document.activeElement;
+    modalImage.src = photo.currentSrc || photo.src;
+    modalImage.alt = photo.alt;
+    modal.classList.add('is-open');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('team-photo-modal-open');
+    closeButton.focus();
+  }
+
+  photos.forEach(photo => {
+    photo.classList.add('team-photo-trigger');
+    photo.tabIndex = 0;
+    photo.setAttribute('role', 'button');
+    photo.setAttribute('aria-label', 'Powiększ zdjęcie: ' + photo.alt);
+    photo.addEventListener('click', () => openModal(photo));
+    photo.addEventListener('keydown', event => {
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        openModal(photo);
+      }
+    });
+  });
+
+  closeButton.addEventListener('click', closeModal);
+  modal.addEventListener('click', event => {
+    if (!dialog.contains(event.target)) closeModal();
+  });
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && modal.classList.contains('is-open')) closeModal();
+  });
+})();

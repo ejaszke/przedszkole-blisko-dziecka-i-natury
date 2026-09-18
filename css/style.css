@@ -53,6 +53,13 @@ h1, h2, h3, h4 { font-family: var(--font-h); line-height: 1.2; }
 .section-title.blue     { color: #87CEEB; }
 .section-title.green    { color: var(--teal-dark); }
 
+/* Privacy policy uses the readable body font; headings retain clear emphasis. */
+.privacy-page .hero-blob h1,
+.privacy-policy h3 {
+  font-family: var(--font-b) !important;
+  font-weight: 700;
+}
+
 /* =============================================
    NAVIGATION
    ============================================= */
@@ -326,6 +333,29 @@ h1, h2, h3, h4 { font-family: var(--font-h); line-height: 1.2; }
   max-width: 300px;
 }
 
+/* Zajęcia dodatkowe – larger pink shape to frame the longer hero heading. */
+.hero--activities .hero-img { object-position: center center; }
+
+.hero-blob.pink {
+  width: 560px;
+  max-width: 46vw;
+  min-height: 460px;
+  padding: 3rem 4.5rem;
+}
+
+.hero-blob.pink .hero-blob-bg {
+  left: 48%;
+  top: 53%;
+  width: 1430px;
+  height: 620px;
+  max-width: none;
+}
+
+.hero-blob.pink h1 {
+  max-width: 380px;
+  line-height: 1.25;
+}
+
 /* left-aligned hero content */
 .hero-overlay.left { justify-content: flex-start; padding-left: 6%; }
 
@@ -354,6 +384,8 @@ h1, h2, h3, h4 { font-family: var(--font-h); line-height: 1.2; }
   .hero-wave svg { height: 20px; }
 
   .hero-blob.kontakt .hero-blob-bg { width: 400px; height: 480px; }
+  .hero-blob.pink { width: 420px; max-width: 60vw; min-height: 340px; padding: 2.5rem 3rem; }
+  .hero-blob.pink .hero-blob-bg { left: 42%; top: 50%; width: 820px; height: 580px; }
 }
 
 /* =============================================
@@ -384,8 +416,8 @@ h1, h2, h3, h4 { font-family: var(--font-h); line-height: 1.2; }
   left: 5%;
   top: 50%;
   transform: translateY(-50%);
-  width: 460px;
-  height: 330px;
+  width: 540px;
+  height: 390px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -399,23 +431,16 @@ h1, h2, h3, h4 { font-family: var(--font-h); line-height: 1.2; }
   width: 100%;
   height: 100%;
   object-fit: fill;
+  transform: scale(1.18);
   z-index: 0;
   pointer-events: none;
-}
-
-.groups-hero__fox {
-  flex-shrink: 0;
-  height: 130px;
-  width: auto;
-  object-fit: contain;
-  position: relative;
-  z-index: 3;
 }
 
 .groups-hero__title {
   flex-shrink: 0;
   position: relative;
   z-index: 3;
+  transform: translateX(50px);
   color: #fff;
   font-family: var(--font-h);
   font-size: 2.8rem;
@@ -770,6 +795,72 @@ a.review-read-more:hover { text-decoration: underline; }
   flex-shrink: 0;
 }
 
+.team-detail-item img.team-photo-trigger {
+  cursor: zoom-in;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.team-detail-item img.team-photo-trigger:hover,
+.team-detail-item img.team-photo-trigger:focus-visible {
+  transform: scale(1.07);
+  box-shadow: 0 0 0 4px rgba(69, 196, 203, .3);
+  outline: none;
+}
+
+body.team-photo-modal-open { overflow: hidden; }
+
+.team-photo-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: grid;
+  place-items: center;
+  padding: 1.5rem;
+  background: rgba(22, 49, 56, .66);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .2s ease, visibility .2s ease;
+}
+
+.team-photo-modal.is-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.team-photo-modal__dialog {
+  position: relative;
+  width: min(390px, 86vw);
+}
+
+.team-photo-modal__image {
+  display: block;
+  width: 100%;
+  max-height: 78vh;
+  object-fit: contain;
+  border-radius: 1.25rem;
+  background: var(--white);
+  box-shadow: 0 16px 46px rgba(0, 0, 0, .3);
+}
+
+.team-photo-modal__close {
+  position: absolute;
+  top: -.75rem;
+  right: -.75rem;
+  width: 2.4rem;
+  height: 2.4rem;
+  border: 0;
+  border-radius: 50%;
+  background: var(--white);
+  color: var(--text);
+  font-size: 1.65rem;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, .2);
+}
+
+.team-photo-modal__close:hover,
+.team-photo-modal__close:focus-visible { background: var(--teal); color: var(--white); }
+
 .team-detail-info h3 {
   font-family: var(--font-h);
   font-size: 1.15rem;
@@ -799,7 +890,7 @@ a.review-read-more:hover { text-decoration: underline; }
 }
 
 .tabs-bar {
-  background: var(--teal);
+  background: #80cbc4;
 }
 
 .tabs-inner {
@@ -829,16 +920,54 @@ a.review-read-more:hover { text-decoration: underline; }
 
 .group-section-title {
   font-family: var(--font-h);
-  font-size: 1.9rem;
-  color: var(--teal);
-  line-height: 1.15;
+  font-size: clamp(3.6rem, 4.6vw, 5rem);
+  color: #00b4d8;
+  font-weight: 700;
+  line-height: 1.05;
 }
 
 .group-section-subtitle {
-  font-size: 1rem;
-  color: var(--teal-dark);
-  font-style: italic;
-  margin-top: .1rem;
+  font-family: var(--font-h);
+  font-size: 2rem;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 1.15;
+  color: #00b4d8;
+  margin-top: .25rem;
+}
+
+.group-label {
+  width: 100%;
+  margin: 0 0 .5rem;
+  text-align: left;
+}
+
+.group-label .group-section-subtitle { margin-bottom: 0; }
+
+#lesna .group-section-title,
+#lesna .group-section-subtitle { color: #00b7df; }
+
+#integracyjna .group-section-title,
+#integracyjna .group-section-subtitle { color: #7ecce5; }
+
+#montessori .group-section-title,
+#montessori .group-section-subtitle { color: #40ad6e; }
+
+#maluszkow .group-section-title,
+#maluszkow .group-section-subtitle { color: #91cd6a; }
+
+/* Leśna i Integracyjna use the same organic photo treatment as the PNG cutouts. */
+#lesna .img-circle,
+#integracyjna .img-circle {
+  clip-path: url(#blob-groups);
+}
+
+#lesna .img-circle,
+#integracyjna .img-circle,
+#montessori .img-circle,
+#maluszkow .img-circle {
+  width: 210px;
+  height: 210px;
 }
 
 /* =============================================
@@ -1148,6 +1277,9 @@ textarea.form-control { resize: vertical; min-height: 160px; }
   .hero-blob.kontakt { width: 300px; min-height: 270px; padding: 2.6rem 2rem 3.5rem; }
   .hero-blob.kontakt .hero-blob-bg { width: 440px; height: 580px; }
   .hero-blob.kontakt h1 { font-size: 1.05rem; max-width: 230px; }
+  .hero-blob.pink { width: 300px; max-width: 100%; min-height: 260px; padding: 2.6rem 2rem; }
+  .hero-blob.pink .hero-blob-bg { left: 45%; top: 50%; width: 640px; height: 460px; }
+  .hero-blob.pink h1 { max-width: 250px; font-size: 1.05rem; }
 
   .map-wrap { height: 340px; }
 
@@ -1158,13 +1290,14 @@ textarea.form-control { resize: vertical; min-height: 160px; }
   .groups-hero { height: 380px; }
   .groups-hero__blob {
     left: 3%;
-    width: 290px;
-    height: 210px;
+    width: 320px;
+    height: 230px;
     gap: .8rem;
     padding: 1.5rem 2rem;
   }
-  .groups-hero__fox { height: 80px; }
-  .groups-hero__title { font-size: 1.8rem; }
+  .groups-hero__title { font-size: 1.8rem; transform: translateX(25px); }
+  .group-section-title { font-size: 2.45rem; }
+  .group-section-subtitle { font-size: 1.55rem; }
 }
 
 @media (min-width: 1100px) {
@@ -1174,6 +1307,10 @@ textarea.form-control { resize: vertical; min-height: 160px; }
   .section-title--xl { font-size: 5.2rem; }
   .col-img img, .img-circle { width: 320px; height: 320px; }
   .col-img { flex-basis: 320px; }
+  #lesna .img-circle,
+  #integracyjna .img-circle,
+  #montessori .img-circle,
+  #maluszkow .img-circle { width: 270px; height: 270px; }
 }
 
 @media (min-width: 1440px) {
@@ -1183,4 +1320,8 @@ textarea.form-control { resize: vertical; min-height: 160px; }
   .section-title--xl { font-size: 5.2rem; }
   .col-img img, .img-circle { width: 400px; height: 400px; }
   .col-img { flex-basis: 400px; }
+  #lesna .img-circle,
+  #integracyjna .img-circle,
+  #montessori .img-circle,
+  #maluszkow .img-circle { width: 320px; height: 320px; }
 }
