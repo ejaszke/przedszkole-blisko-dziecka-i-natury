@@ -6,9 +6,6 @@
   <title>Kontakt – Przedszkole Blisko Dziecka i Natury</title>
   <link rel="stylesheet" href="css/style.css?v=social-icons-3">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
-        crossorigin="">
   <link rel="icon" type="image/png" href="favicon.png">
 </head>
 <body>
@@ -109,7 +106,13 @@
 
   <!-- MAP -->
   <div class="map-wrap">
-    <div id="kontakt-map" role="img" aria-label="Mapa dojazdu – ul. Katowicka 24, 44-240 Żory"></div>
+    <iframe
+      src="https://www.google.com/maps?q=Przedszkole%20Blisko%20Dziecka%20i%20Natury%2C%20Katowicka%2024%2C%2044-240%20%C5%BBory&amp;z=17&amp;output=embed"
+      title="Mapa Google – Przedszkole Blisko Dziecka i Natury, ul. Katowicka 24 w Żorach"
+      loading="lazy"
+      allowfullscreen
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
   </div>
 
   <!-- CONTACT FORM -->
@@ -179,30 +182,5 @@
   </footer>
 
   <script src="js/main.js"></script>
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-          integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-          crossorigin=""></script>
-  <script>
-    (function () {
-      var mapEl = document.getElementById('kontakt-map');
-      if (!mapEl || typeof L === 'undefined') return;
-      var coords = [50.0501832, 18.7133999];
-      var map = L.map(mapEl, { scrollWheelZoom: false }).setView(coords, 18);
-      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
-        maxZoom: 19
-      }).addTo(map);
-      var icon = L.icon({
-        iconUrl: 'materialy/kontakt/pinezka.svg',
-        iconSize: [64, 64],
-        iconAnchor: [32, 60],
-        popupAnchor: [0, -56],
-        className: 'kontakt-map__marker'
-      });
-      L.marker(coords, { icon: icon, title: 'Przedszkole Blisko Dziecka i Natury' })
-        .addTo(map)
-        .bindPopup('<strong>Przedszkole Blisko Dziecka i Natury</strong><br>ul. Katowicka 24, 44-240 Żory');
-    })();
-  </script>
 </body>
 </html>
