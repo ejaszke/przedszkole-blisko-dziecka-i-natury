@@ -531,6 +531,7 @@ h1, h2, h3, h4 { font-family: var(--font-h); line-height: 1.2; }
 .hero-blob--bottom { justify-content: flex-end; padding-top: 5.5rem; }
 
 #o-nas .row-content { align-items: flex-start; }
+#o-nas { scroll-margin-top: calc(var(--nav-h) + 32px); }
 #adaptacja .row-content { align-items: flex-start; }
 #adaptacja .col-img { padding-top: 20px; }
 
