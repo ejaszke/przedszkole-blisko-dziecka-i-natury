@@ -261,3 +261,36 @@ initReviews(REVIEWS_CONFIG);
     if (event.key === 'Escape' && modal.classList.contains('is-open')) closeModal();
   });
 })();
+
+// ============================================================
+// Team descriptions – collapsed previews
+// ============================================================
+(function () {
+  const profiles = document.querySelectorAll('.team-detail-info');
+  if (!profiles.length) return;
+
+  profiles.forEach((profile, index) => {
+    const paragraphs = [...profile.querySelectorAll(':scope > p')];
+    if (!paragraphs.length) return;
+
+    const description = document.createElement('div');
+    description.className = 'team-description';
+    description.id = 'team-description-' + (index + 1);
+    paragraphs[0].before(description);
+    paragraphs.forEach(paragraph => description.appendChild(paragraph));
+
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.className = 'team-description-toggle';
+    button.textContent = 'czytaj więcej';
+    button.setAttribute('aria-expanded', 'false');
+    button.setAttribute('aria-controls', description.id);
+    description.after(button);
+
+    button.addEventListener('click', () => {
+      const expanded = description.classList.toggle('is-expanded');
+      button.setAttribute('aria-expanded', String(expanded));
+      button.textContent = expanded ? 'zwiń' : 'czytaj więcej';
+    });
+  });
+})();

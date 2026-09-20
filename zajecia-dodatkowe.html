@@ -4,11 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Zajęcia Dodatkowe – Przedszkole Blisko Dziecka i Natury</title>
-  <link rel="stylesheet" href="css/style.css?v=activities-hero-8">
+  <link rel="stylesheet" href="css/style.css?v=activities-layout-10">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="icon" type="image/png" href="favicon.png">
 </head>
-<body>
+<body class="activities-page">
 
   <svg aria-hidden="true" focusable="false" style="position:absolute;width:0;height:0;overflow:hidden">
     <defs>
@@ -49,14 +49,13 @@
         <div class="dropdown-menu">
           <a href="#jezyk-angielski"      class="dropdown-item">język angielski</a>
           <a href="#sensoplastyka"        class="dropdown-item">sensoplastyka</a>
-          <a href="#zajecia-przyrodnicze" class="dropdown-item">zajęcia przyrodnicze</a>
+          <a href="#zajecia-lesne"        class="dropdown-item">zajęcia leśne</a>
           <a href="#arteterapia"          class="dropdown-item">arteterapia</a>
           <a href="#joga"                 class="dropdown-item">joga</a>
           <a href="#rytmika"              class="dropdown-item">rytmika</a>
-          <a href="#zajecia-ceramiczne"   class="dropdown-item">zaj. ceramiczne</a>
+          <a href="#ceramika"             class="dropdown-item">ceramika</a>
           <a href="#logopedia"            class="dropdown-item">logopedia</a>
           <a href="#zabawy-ze-sztuka"     class="dropdown-item">zabawy ze sztuką</a>
-          <a href="#dogoterapia"          class="dropdown-item">dogoterapia</a>
         </div>
       </li>
       <li class="nav-item"><a href="rekrutacja-i-cennik.html"  class="nav-link">rekrutacja i cennik</a></li>
@@ -81,6 +80,7 @@
     <div class="hero-overlay">
       <div class="hero-blob pink">
         <img class="hero-blob-bg" src="assets/baner_shape_zajecia_dodatkowe.svg" alt="" aria-hidden="true">
+        <img class="activities-hero-fox" src="lisek_nasze_grupy.png" alt="" aria-hidden="true">
         <h1>zajęcia te mają na celu rozbudzanie zainteresowań i pasji, stymulowanie rozwoju u najmłodszych</h1>
       </div>
     </div>
@@ -92,30 +92,35 @@
   </section>
 
   <!-- CONTENT -->
-  <section class="section">
-    <h2 class="section-title">zajęcia<br>dodatkowe</h2>
+  <section class="section activities-content">
+    <div class="activities-intro">
+      <h2 class="section-title activities-main-title">zajęcia<br>dodatkowe</h2>
 
-    <!-- INDEX -->
-    <nav class="activities-index">
-      <a href="#jezyk-angielski">język angielski</a>
-      <a href="#arteterapia">arteterapia</a>
-      <a href="#logopedia">logopedia</a>
-      <a href="#sztuka">zabawy ze sztuką</a>
-      <a href="#joga">joga</a>
-      <a href="#zajecia-ceramiczne">zajęcia ceramiczne</a>
-      <a href="#drama">drama</a>
-      <a href="#dogoterapia">dogoterapia</a>
-      <a href="#rytmika">rytmika</a>
-      <a href="#zajecia-przyrodnicze">zajęcia przyrodnicze</a>
-    </nav>
+      <!-- INDEX -->
+      <nav class="activities-index" aria-label="Lista zajęć dodatkowych">
+        <div class="activities-index-column">
+          <a href="#jezyk-angielski">język angielski</a>
+          <a href="#logopedia">logopedia</a>
+          <a href="#joga">joga</a>
+          <a href="#sensoplastyka">sensoplastyka</a>
+          <a href="#rytmika">rytmika</a>
+        </div>
+        <div class="activities-index-column">
+          <a href="#arteterapia">arteterapia</a>
+          <a href="#zabawy-ze-sztuka">zabawy ze sztuką</a>
+          <a href="#ceramika">ceramika</a>
+          <a href="#zajecia-lesne">zajęcia leśne</a>
+        </div>
+      </nav>
+    </div>
 
     <!-- JĘZYK ANGIELSKI -->
     <div class="activity-entry" id="jezyk-angielski">
       <div class="row-content">
         <div class="col-text">
-          <h3 class="activity-title">język angielski ze szkołą Home of Bears</h3>
-          <p>Nasze zajęcia z języka angielskiego to czas przepełniony różnorodnością pod kątem aktywności oraz używanych pomocy i środków dydaktycznych. Dbamy, aby zajęcia dla przedszkolaków prowadzone były w zanurzeniu w języku angielskim, dzięki czemu dzieci w sposób naturalny przyswajają sobie język.</p>
-          <p>Podczas zajęć zapraszamy dzieci do wspólnego nazywania określonych elementów przy użyciu pełnych konstrukcji zdaniowych. Wspólnie śpiewamy piosenki i łączymy ruch z utrwalaniem zwrotów i wyrażeń.</p>
+          <h3 class="activity-title">język angielski</h3>
+          <p>Dzięki metodzie zanurzenia w języku, a także za sprawą wykorzystania różnorodnych aktywności i pomocy dydaktycznych dzieci w sposób naturalny chłoną język obcy, z otwartością powtarzając i utrwalając poznane zagadnienia.</p>
+          <p>Podczas zajęć zapraszamy dzieci do wspólnego nazywania określonych elementów przy użyciu pełnych konstrukcji zdaniowych. Śpiewamy piosenki oraz proponujemy dzieciom wspólne zabawy ruchowe dla skuteczniejszego utrwalenia informacji.</p>
         </div>
         <div class="col-img">
           <img src="przedszkole_named_assets/page7_activity_english_girl_card.png" alt="Dziewczynka na zajęciach angielskiego" class="img-circle" onerror="this.outerHTML='<div class=\'img-placeholder\' style=\'background:#e3f2fd\'>🇬🇧</div>'">
@@ -150,9 +155,24 @@
       </div>
     </div>
 
+    <!-- SENSOPLASTYKA -->
+    <div class="activity-entry" id="sensoplastyka">
+      <div class="row-content reverse">
+        <div class="col-text">
+          <h3 class="activity-title">sensoplastyka</h3>
+          <p>Sensoplastyka to zajęcia prowadzone w formie swobodnej, radosnej zabawy, bliskiej dziecięcej ciekawości i naturalnej potrzebie poznawania świata. Wspiera rozwój dziecka w wielu obszarach, szczególnie w zakresie integracji sensorycznej; kształtuje także umiejętności społeczne takie jak współpraca, komunikacja, dzielenie się czy ustalanie i przestrzeganie zasad.</p>
+          <p>Podczas zajęć dzieci mają okazję zanurzyć się w świecie różnorodnych kolorów, zapachów, faktur i konsystencji. Mogą dotykać, przelewać, ugniatać, mieszać, tworzyć różne masy i badać materiały wszystkimi zmysłami. Takie doświadczenia rozwijają kreatywność, pewność siebie, sprawczość oraz zdolności poznawcze.</p>
+          <p>Zajęcia prowadzone są raz w miesiącu dla dzieci wszystkich grup przez certyfikowanego trenera Sensoplastyki I stopnia.</p>
+        </div>
+        <div class="col-img">
+          <img src="assets/foto_zaj_dod_sensoplastyka.png" alt="Sensoplastyka" class="img-circle">
+        </div>
+      </div>
+    </div>
+
     <!-- RYTMIKA -->
     <div class="activity-entry" id="rytmika">
-      <div class="row-content reverse">
+      <div class="row-content">
         <div class="col-text">
           <h3 class="activity-title">rytmika</h3>
           <p>Celem zajęć jest rozbudzanie u dzieci miłości do muzyki poprzez śpiew, ruch, grę na instrumentach, taniec i improwizację. Program oparty jest na teoriach pedagogów K. Orffa, E. Jaquesa-Dalcroze oraz E. E. Gordona.</p>
@@ -166,11 +186,11 @@
 
     <!-- ARTETERAPIA -->
     <div class="activity-entry" id="arteterapia">
-      <div class="row-content">
+      <div class="row-content reverse">
         <div class="col-text">
-          <h3 class="activity-title">arteterapia – Rozwojowa kreska</h3>
-          <p>Rozwojowa kreska to cykl rocznych warsztatów rozwojowych dla dzieci, których celem jest wykorzystanie przez dziecko własnych zasobów do lepszego funkcjonowania w życiu w poczuciu szczęścia i ogólnego zadowolenia ze swojego życia.</p>
-          <p>Warsztaty dostosowane są do wieku i możliwości dzieci i nie stanowią formy terapii. Każdy warsztat ma odrębną tematykę rozwijającą zasoby u dziecka.</p>
+          <h3 class="activity-title">arteterapia</h3>
+          <p>Nasza autorska arteterapia rozwojowa koncentruje się na wzmacnianiu autentycznego potencjału dziecka poprzez swobodną twórczość. W atmosferze pełnej akceptacji rozwijamy u dzieci kluczowe zasoby osobiste, takie jak pewność siebie, poczucie wartości i sprawstwa, inteligencję emocjonalną oraz umiejętność uważnego wyciszenia. Zajęcia budują w dzieciach odporność psychiczną i pozwalają im rozkwitać we własnym tempie.</p>
+          <p>W arteterapii sięgamy po autorskie narzędzia wspierające rozwój dziecka: grę rozwojową „Głaskotki” oraz książki Ewy Baranowskiej-Jojko, m.in. „Arteterapię przez cały rok” – zeszyt ćwiczeń i zabaw dla dzieci w wieku 5+, który rozwija życzliwość, wdzięczność i poczucie wspólnoty.</p>
         </div>
         <div class="col-img">
           <img src="assets/foto_zaj_dod_arteterapia.png" alt="Arteterapia" class="img-circle" onerror="this.outerHTML='<div class=\'img-placeholder\' style=\'background:#e0f7fa\'></div>'">
@@ -178,13 +198,13 @@
       </div>
     </div>
 
-    <!-- ZAJĘCIA CERAMICZNE -->
-    <div class="activity-entry" id="zajecia-ceramiczne">
-      <div class="row-content reverse">
+    <!-- CERAMIKA -->
+    <div class="activity-entry" id="ceramika">
+      <div class="row-content">
         <div class="col-text">
-          <h3 class="activity-title">zajęcia ceramiczne</h3>
-          <p>Dzięki współpracy ze Studiem Działań Artystycznych w Miejskim Ośrodku Kultury w Żorach nasze dzieci mają możliwość artystycznego obcowania z gliną. Poznając jej właściwości i różnorodne techniki rozwijają własną manualność, skupienie uwagi, twórczą wyobraźnię i doświadczają radości tworzenia.</p>
-          <p>Pod okiem artystów dzieci tworzą ceramikę dostosowaną do ich możliwości indywidualnych na różne okazje i święta oraz jako upominki.</p>
+          <h3 class="activity-title">ceramika</h3>
+          <p>Spotkania z ceramiką to kreatywne warsztaty sensoryczne rozwijające wyobraźnię i motorykę małą, kształtujące cierpliwość, wytrwałość i umiejętność planowania pracy. To tutaj powstają naczynia, płaskorzeźby i figurki, które są piękną, trwałą pamiątką, a często także prezentem.</p>
+          <p>Podczas zajęć, oprócz zdolności motorycznych, rozwijamy także wytrwałość, umiejętność widzenia przestrzennego i pracy zespołowej. Dzieci są świadkami procesu, w którym z kawałka gliny tworzy się coś namacalnego i zachwycającego; we własnym tempie dochodzą do wniosku, że na piękny efekt końcowy warto poczekać.</p>
         </div>
         <div class="col-img">
           <img src="assets/foto_zaj_dod_ceramika.png" alt="Zajęcia ceramiczne" class="img-circle" onerror="this.outerHTML='<div class=\'img-placeholder\' style=\'background:#efebe9\'></div>'">
@@ -192,27 +212,13 @@
       </div>
     </div>
 
-    <!-- DRAMA -->
-    <div class="activity-entry" id="drama">
-      <div class="row-content">
-        <div class="col-text">
-          <h3 class="activity-title">drama</h3>
-          <p>To spotkania z baśnią i muzyką. Na zajęciach opowiadane są baśnie z różnych stron świata: regionalne, polskie, fińskie, celtyckie, indiańskie, japońskie, cygańskie, afrykańskie i inne. W trakcie opowiadania baśni pobudzane są zmysły poprzez zabawy „dotknij, posmakuj, powąchaj, posłuchaj", których celem jest uruchomienie ciała i ruchu, tańca i improwizacji.</p>
-          <p>Muzyka opowiada razem z prowadzącą. Wykorzystywane instrumenty to gitara, bębny, flety, kalimba, dzwonki. Zajęcia obejmują wspólne muzykowanie oraz zabawy głosowe pozwalające doświadczyć własnego głosu jako instrumentu.</p>
-        </div>
-        <div class="col-img">
-          <img src="images/zajecia/drama.jpg" alt="Drama" class="img-circle" onerror="this.outerHTML='<div class=\'img-placeholder\' style=\'background:#f3e5f5\'>🎭</div>'">
-        </div>
-      </div>
-    </div>
-
-    <!-- SZTUKA -->
-    <div class="activity-entry" id="sztuka">
+    <!-- ZABAWY ZE SZTUKĄ -->
+    <div class="activity-entry" id="zabawy-ze-sztuka">
       <div class="row-content reverse">
         <div class="col-text">
           <h3 class="activity-title">zabawy ze sztuką</h3>
-          <p>Zajęcia ze sztuki są zaproszeniem do wejścia w świat wielkich twórców i ich dzieł. W ich trakcie „muzeum sztuki" odwiedza przedszkolaki. Podczas zajęć oswajamy się ze sztuką, podziwiamy, komentujemy.</p>
-          <p>Poznawane są różne formy wyrazu takie jak malarstwo, rzeźba, architektura czy sztuka ziemi. Chcielibyśmy, aby te zajęcia otworzyły sztuce furtkę do życia dzieci, tak aby mogła im towarzyszyć w rozwoju i inspirować własne działania twórcze.</p>
+          <p>Kreatywne spotkania inspirowane wybranymi dziełami artystów, których sednem jest radość z odkrywania kolorów i ich znaczenia w samopoczuciu młodego człowieka. Poprzez zabawę i aktywne działania poznajemy znane dzieła i sławnych artystów.</p>
+          <p>Podczas zajęć wspólnie podróżujemy przez świat technik wyrazu artystycznego, takich jak grafika, malarstwo, rzeźba i filcowanie. Kształtujemy wrażliwość na sztukę i rozwijamy ekspresję twórczą, pomagając dzieciom znaleźć odpowiednie dla siebie środki wyrazu.</p>
         </div>
         <div class="col-img">
           <img src="assets/foto_zaj_dod_zabawy_ze_sztuka.png" alt="Zabawy ze sztuką" class="img-circle" onerror="this.outerHTML='<div class=\'img-placeholder\' style=\'background:#fce4ec\'></div>'">
@@ -220,29 +226,17 @@
       </div>
     </div>
 
-    <!-- ZAJĘCIA PRZYRODNICZE -->
-    <div class="activity-entry" id="zajecia-przyrodnicze">
+    <!-- ZAJĘCIA LEŚNE -->
+    <div class="activity-entry" id="zajecia-lesne">
       <div class="row-content">
         <div class="col-text">
-          <h3 class="activity-title">zajęcia przyrodnicze</h3>
-          <p>Każda pora roku jest najlepsza, by poznawać i eksplorować świat lasu i jego mieszkańców, wykorzystując w tym celu wszystkie zmysły. Spacery przyrodnicze odbywają się w formie comiesięcznych wypraw do lasu.</p>
-          <p>Dzieci zapoznają się ze zmiennością pór roku, leśnymi roślinami, zwierzętami i ich zwyczajami, a także możliwościami zabawy w leśnym otoczeniu.</p>
+          <h3 class="activity-title">zajęcia leśne</h3>
+          <p>Każdego miesiąca spotykamy się z Fundacją Leśne Projekty, by razem z nimi poznawać okoliczny las. Warsztaty leśne odbywają się cyklicznie i zawsze zgodnie z rytmem natury – dostosowujemy się do sezonowych zmian w przyrodzie i do potrzeb dzieci, odpowiadając na ich energię i podążając za ciekawością.</p>
+          <p>Podczas zajęć doświadczamy przyrody wszystkimi zmysłami; obserwujemy, dotykamy, nasłuchujemy, wąchamy, czasami smakujemy. Używamy lup i lornetek, eksperymentujemy, budujemy, podążamy za tropami, a po zajęciach bujamy się w hamakach. Leśnym zajęciom często towarzyszy opowieść, która wprowadza dzieci w temat warsztatów.</p>
+          <p>Aktywności wspierają zdolności poznawcze i wiedzę przyrodniczą, a także rozwój dużej i małej motoryki, koordynację ruchową oraz integrację sensoryczną.</p>
         </div>
         <div class="col-img">
           <img src="assets/foto_zaj_dod_zajecia_lesne.png" alt="Zajęcia przyrodnicze" class="img-circle" onerror="this.outerHTML='<div class=\'img-placeholder\' style=\'background:#dcedc8\'></div>'">
-        </div>
-      </div>
-    </div>
-
-    <!-- DOGOTERAPIA -->
-    <div class="activity-entry" id="dogoterapia">
-      <div class="row-content reverse">
-        <div class="col-text">
-          <h3 class="activity-title">dogoterapia</h3>
-          <p>Dogoterapia, czyli terapia z udziałem psa, wspiera rozwój emocjonalny, społeczny i psychomotoryczny dzieci. Kontakt z psem terapeutycznym buduje poczucie bezpieczeństwa, uczy empatii i odpowiedzialności. Zajęcia prowadzone są przez certyfikowanego dogoterapeutę wraz z odpowiednio wyszkolonym psem.</p>
-        </div>
-        <div class="col-img">
-          <img src="images/zajecia/dogoterapia.jpg" alt="Dogoterapia" class="img-circle" onerror="this.outerHTML='<div class=\'img-placeholder\' style=\'background:#fff8e1\'>🐕</div>'">
         </div>
       </div>
     </div>
