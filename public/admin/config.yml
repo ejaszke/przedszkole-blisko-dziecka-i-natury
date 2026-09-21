@@ -27,3 +27,21 @@ collections:
       - {name: image, label: Zdjęcie, widget: image}
       - {name: order, label: Kolejność, widget: number, value_type: int, min: 1, hint: "Niższa liczba = wyżej na stronie"}
       - {name: body, label: Opis (bio), widget: markdown}
+
+  - name: strony
+    label: Strony
+    files:
+      - name: home
+        label: Strona główna
+        file: src/content/strony/home.md
+        extension: md
+        format: frontmatter
+        fields:
+          - {name: hero_title, label: "Hero – tytuł (H1)", widget: string, hint: "Możesz użyć &nbsp; żeby wymusić spację nierozdzielającą"}
+          - {name: hero_image, label: "Hero – zdjęcie tła", widget: image}
+          - {name: o_nas_photo, label: "Sekcja »o nas« – zdjęcie", widget: image}
+          - {name: body, label: "Sekcja »o nas« – tekst", widget: markdown, hint: "Rozdziel akapity pustą linią"}
+          - {name: adaptacja_text, label: "Sekcja »adaptacja« – tekst", widget: text}
+          - {name: adaptacja_photo, label: "Sekcja »adaptacja« – zdjęcie", widget: image}
+          - {name: review_rating, label: "Opinie – średnia ocena", widget: string, pattern: ['^[0-9]+([.,][0-9])?$', "Np. 4.5"]}
+          - {name: review_count, label: "Opinie – liczba opinii", widget: number, value_type: int, min: 0}

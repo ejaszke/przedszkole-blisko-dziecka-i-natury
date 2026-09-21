@@ -1,3 +1,11 @@
+---
+import { getEntry } from 'astro:content';
+
+const home = await getEntry('strony', 'home');
+if (!home) throw new Error('Missing content entry: strony/home');
+const { data } = home;
+const { Content } = await home.render();
+---
 <!DOCTYPE html>
 <html lang="pl">
 <head>
@@ -81,11 +89,11 @@
 
   <!-- HERO -->
   <section class="hero">
-    <img src="przedszkole_named_assets/page2_hero_child_frog.png" alt="Dziecko bawiące się w przedszkolu" class="hero-img">
+    <img src={data.hero_image} alt="Dziecko bawiące się w przedszkolu" class="hero-img">
     <div class="hero-overlay">
       <div class="hero-blob hero-blob--bottom">
         <img class="hero-blob-bg" src="assets/baner_shape_o_nas.svg" alt="" aria-hidden="true">
-        <h1>Nasze przedszkole to bezpieczne, przyjazne i&nbsp;inspirujące miejsce dla dzieci</h1>
+        <h1 set:html={data.hero_title}></h1>
         <img class="hero-fox" src="lisek_nasze_grupy.png" alt="" aria-hidden="true">
       </div>
     </div>
@@ -102,13 +110,11 @@
       <div class="col-img">
         <div class="photo-blob-wrap">
           <h2 class="section-title section-title--xl">o nas</h2>
-          <img src="assets/foto_o_nas.png" alt="O nas" class="photo-blob">
+          <img src={data.o_nas_photo} alt="O nas" class="photo-blob">
         </div>
       </div>
       <div class="col-text">
-        <p>Nasze przedszkole to bezpieczne, przyjazne i inspirujące miejsce dla dzieci. Jest w nim przestrzeń na pozytywny dialog pełen szacunku do dziecka i rodzica w duchu NVC, zaufanie do dziecięcych kompetencji, wspieranie dzieci z poszanowaniem ich granic, współpracę i przewodnictwo dorosłych.</p>
-        <p>Zapewniamy codzienny kontakt z naturą, ze sztuką, spotkania z niezwykłymi ludźmi i wycieczki, dużo ruchu i aktywności, zdrowe odżywianie. Stawiamy na rozwijanie samodzielności – dzieci same nakładają sobie jedzenie, same przygotowują owoce i warzywa na przekąski, staramy się ich nie wyręczać podczas czynności samoobsługowych.</p>
-        <p>Inspirujemy się pedagogiką Montessori. Od 2021 r. prowadzimy grupę różnowiekową z elementami pedagogiki Montessori, gdzie dzieci podczas codziennej pracy z materiałem korzystają z oryginalnych pomocy.</p>
+        <Content />
       </div>
     </div>
   </section>
@@ -118,10 +124,10 @@
     <div class="row-content">
       <div class="col-text">
         <h2 class="section-title section-title--xl blue">adaptacja</h2>
-        <p>Czas adaptacji dedykujemy indywidualnie rodzinie, która chce zacząć przygodę z naszym przedszkolem. Zakładamy, że rodzic może towarzyszyć dziecku podczas poznawania placówki. Ma również możliwość zaplanować proces adaptacji swojego dziecka wraz z nauczycielem prowadzącym oraz w razie potrzeby otrzymać potrzebne wsparcie dla siebie i dziecka.</p>
+        <p>{data.adaptacja_text}</p>
       </div>
       <div class="col-img">
-        <img src="assets/foto_adaptacja.png" alt="Adaptacja" class="photo-blob">
+        <img src={data.adaptacja_photo} alt="Adaptacja" class="photo-blob">
       </div>
     </div>
 
@@ -136,7 +142,7 @@
     <h2 class="reviews-title">opinie o nas</h2>
     <p class="reviews-summary">
       <span class="reviews-stars-row">★★★★★</span>
-      <strong>4.5&nbsp;/&nbsp;5</strong> na podstawie 16 opinii
+      <strong>{data.review_rating}&nbsp;/&nbsp;5</strong> na podstawie {data.review_count} opinii
     </p>
     <div class="carousel-wrap">
       <button class="carousel-btn" id="prevBtn" aria-label="Poprzednia opinia">&#8249;</button>
@@ -186,6 +192,6 @@
     </div>
   </footer>
 
-  <script src="js/main.js?v=orphans-1"></script>
+  <script is:inline src="js/main.js?v=orphans-1"></script>
 </body>
 </html>
