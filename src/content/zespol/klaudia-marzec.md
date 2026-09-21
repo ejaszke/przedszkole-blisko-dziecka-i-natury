@@ -1,6 +1,6 @@
 ---
 name: Klaudia Marzec
-image: assets/kadra_klaudia_marzec.png
+image: /przedszkole-blisko-dziecka-i-natury/assets/kadra_klaudia_marzec.png
 order: 2
 ---
 

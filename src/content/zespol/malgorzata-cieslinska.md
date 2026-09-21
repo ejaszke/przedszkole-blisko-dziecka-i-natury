@@ -1,6 +1,6 @@
 ---
 name: Małgorzata Cieślińska
-image: assets/kadra_malgorzata_cieslinska.png
+image: /przedszkole-blisko-dziecka-i-natury/assets/kadra_malgorzata_cieslinska.png
 order: 6
 ---
 

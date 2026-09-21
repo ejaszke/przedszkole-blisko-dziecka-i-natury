@@ -1,6 +1,6 @@
 ---
 name: Elwira Zembrzuska
-image: assets/kadra_elwira_zembrzuska.png
+image: /przedszkole-blisko-dziecka-i-natury/assets/kadra_elwira_zembrzuska.png
 order: 15
 ---
 

@@ -1,6 +1,6 @@
 ---
 name: Ania Bujok
-image: assets/kadra_ania_bujok.png
+image: /przedszkole-blisko-dziecka-i-natury/assets/kadra_ania_bujok.png
 order: 4
 ---
 

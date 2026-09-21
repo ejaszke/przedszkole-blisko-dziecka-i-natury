@@ -1,6 +1,6 @@
 ---
 name: Karolina Kwiek
-image: assets/kadra_karolina_kwiek.png
+image: /przedszkole-blisko-dziecka-i-natury/assets/kadra_karolina_kwiek.png
 order: 10
 ---
 

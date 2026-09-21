@@ -1,6 +1,6 @@
 ---
 name: Marzena Morawska-Geisler
-image: assets/kadra_marzena_morawska_geisler.png
+image: /przedszkole-blisko-dziecka-i-natury/assets/kadra_marzena_morawska_geisler.png
 order: 8
 ---
 

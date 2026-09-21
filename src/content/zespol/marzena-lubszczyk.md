@@ -1,6 +1,6 @@
 ---
 name: Marzena Lubszczyk
-image: assets/kadra_marzena_lubszczyk.png
+image: /przedszkole-blisko-dziecka-i-natury/assets/kadra_marzena_lubszczyk.png
 order: 3
 ---
 

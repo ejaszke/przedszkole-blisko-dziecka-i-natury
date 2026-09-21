@@ -1,6 +1,6 @@
 ---
 name: Aleksandra Wiechuła
-image: assets/kadra_aleksandra_wiechula.png
+image: /przedszkole-blisko-dziecka-i-natury/assets/kadra_aleksandra_wiechula.png
 order: 1
 ---
 

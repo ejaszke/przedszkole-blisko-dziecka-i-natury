@@ -1,6 +1,6 @@
 ---
 name: Jagoda Janaszak
-image: assets/kadra_jagoda_janaszak.png
+image: /przedszkole-blisko-dziecka-i-natury/assets/kadra_jagoda_janaszak.png
 order: 13
 ---
 

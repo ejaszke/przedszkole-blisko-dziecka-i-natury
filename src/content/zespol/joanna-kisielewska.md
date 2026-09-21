@@ -1,6 +1,6 @@
 ---
 name: Joanna Kisielewska
-image: assets/kadra_joanna_kisielewska.png
+image: /przedszkole-blisko-dziecka-i-natury/assets/kadra_joanna_kisielewska.png
 order: 14
 ---
 

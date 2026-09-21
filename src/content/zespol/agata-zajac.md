@@ -1,6 +1,6 @@
 ---
 name: Agata Zając
-image: assets/kadra_agata_zajac.png
+image: /przedszkole-blisko-dziecka-i-natury/assets/kadra_agata_zajac.png
 order: 12
 ---
 

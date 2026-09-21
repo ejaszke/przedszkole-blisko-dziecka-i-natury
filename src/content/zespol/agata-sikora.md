@@ -1,6 +1,6 @@
 ---
 name: Agata Sikora
-image: assets/kadra_agata_sikora.png
+image: /przedszkole-blisko-dziecka-i-natury/assets/kadra_agata_sikora.png
 order: 11
 ---
 
