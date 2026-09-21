@@ -54,8 +54,7 @@ h1, h2, h3, h4 { font-family: var(--font-h); line-height: 1.2; }
 .section-title.blue     { color: #87CEEB; }
 .section-title.green    { color: var(--teal-dark); }
 
-/* Privacy policy uses the readable body font; headings retain clear emphasis. */
-.privacy-page .hero-blob h1,
+/* Privacy policy body headings retain clear emphasis. */
 .privacy-policy h3 {
   font-family: var(--font-b) !important;
   font-weight: 700;
