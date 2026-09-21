@@ -3,3 +3,6 @@
 Przedszkole elementy/
 *.pdf
 *.zip
+node_modules/
+dist/
+.astro/
