@@ -201,6 +201,35 @@ initReviews(REVIEWS_CONFIG);
 })();
 
 // ============================================================
+// Polish typography – keep short words with the following word
+// ============================================================
+function fixAllOrphans(text) {
+  return text
+    // 1. Spójniki/przyimki jednoliterowe (a, i, o, u, w, z)
+    .replace(/(^|[\s(])([a-zA-Z]|a|i|o|u|w|z)\s+/gi, '$1$2\u00A0')
+    // 2. Najczęstsze przyimki 2-literowe na początku lub wewnątrz (do, od, za, po, na, ze, co)
+    .replace(/(^|[\s(])(do|od|za|po|na|ze|co|ze|bez|pod|nad|ale|itp|itd|np|dr|prof)\s+/gi, '$1$2\u00A0')
+    // 3. Liczby przed jednostkami/słowami (np. "10 kg", "5 lat")
+    .replace(/(\d+)\s+([a-zA-Zzłgkm%]+)/g, '$1\u00A0$2');
+}
+
+(function () {
+  const excludedTags = new Set(['SCRIPT', 'STYLE', 'NOSCRIPT', 'TEXTAREA', 'PRE', 'CODE']);
+  const textNodes = [];
+  const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, {
+    acceptNode(node) {
+      if (!node.nodeValue.trim() || excludedTags.has(node.parentElement?.tagName)) {
+        return NodeFilter.FILTER_REJECT;
+      }
+      return NodeFilter.FILTER_ACCEPT;
+    },
+  });
+
+  while (walker.nextNode()) textNodes.push(walker.currentNode);
+  textNodes.forEach(node => { node.nodeValue = fixAllOrphans(node.nodeValue); });
+})();
+
+// ============================================================
 // Team photos – enlarged preview
 // ============================================================
 (function () {
