@@ -4,9 +4,25 @@ backend:
   branch: main
 
 locale: pl
-media_folder: assets/uploads
-public_folder: assets/uploads
 
-# Obecna strona składa się z ręcznie utrzymywanego HTML. Media można już
-# dodawać przez panel; edycja treści wymaga przeniesienia jej do plików danych.
-collections: []
+# Uploady lądują w public/assets/uploads (repo), a na stronie są dostępne pod /assets/uploads.
+media_folder: public/assets/uploads
+public_folder: /assets/uploads
+
+collections:
+  - name: zespol
+    label: Nasz zespół
+    label_singular: Osoba z zespołu
+    folder: src/content/zespol
+    create: true
+    slug: "{{fields.name}}"
+    identifier_field: name
+    extension: md
+    format: frontmatter
+    summary: "{{order}}. {{name}}"
+    sortable_fields: [order, name]
+    fields:
+      - {name: name, label: Imię i nazwisko, widget: string}
+      - {name: image, label: Zdjęcie, widget: image}
+      - {name: order, label: Kolejność, widget: number, value_type: int, min: 1, hint: "Niższa liczba = wyżej na stronie"}
+      - {name: body, label: Opis (bio), widget: markdown}
