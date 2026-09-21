@@ -8,5 +8,32 @@
 </head>
 <body>
   <script src="https://unpkg.com/decap-cms@beta/dist/decap-cms.js"></script>
+  <script>
+    CMS.registerPreviewStyle('/przedszkole-blisko-dziecka-i-natury/css/style.css');
+    CMS.registerPreviewStyle(
+      'data:text/css;charset=utf-8,' +
+      encodeURIComponent(
+        'body{padding:2rem 1.5rem;background:#fff;}' +
+        '.team-detail-item{max-width:520px;}'
+      )
+    );
+
+    var ZespolPreview = createClass({
+      render: function () {
+        var entry = this.props.entry;
+        var name = entry.getIn(['data', 'name']) || '';
+        var image = entry.getIn(['data', 'image']) || '';
+        return h('div', { className: 'team-detail-item' },
+          image ? h('img', { src: image, alt: name }) : null,
+          h('div', { className: 'team-detail-info' },
+            h('h3', {}, name),
+            this.props.widgetFor('body')
+          )
+        );
+      }
+    });
+
+    CMS.registerPreviewTemplate('zespol', ZespolPreview);
+  </script>
 </body>
 </html>
