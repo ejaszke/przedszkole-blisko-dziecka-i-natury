@@ -91,9 +91,9 @@
   </section>
 
   <!-- HEADING -->
-  <div style="max-width:800px;margin:3rem auto 2rem;padding:0 5%;text-align:center;">
+  <div class="contact-intro">
     <h2 class="section-title">kontakt</h2>
-    <p>Zapraszamy do miejsca, w którym rozwój rozpoczyna się od relacji, a każde dziecko ma przestrzeń, by rozkwitać na swój sposób!</p>
+    <p>Zapraszamy do miejsca, w którym rozwój rozpoczyna się<br>od relacji, a każde dziecko ma przestrzeń, by rozkwitać na swój sposób!</p>
   </div>
 
   <!-- INFO BAR -->
@@ -118,7 +118,11 @@
   <!-- CONTACT FORM -->
   <div class="contact-form-section">
     <h2 class="contact-form-title">masz pytania?</h2>
-    <form action="#" method="post" novalidate>
+    <form action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="a69dbac4-524f-4d0c-bd1c-c6dbf7ffcae0">
+      <input type="hidden" name="subject" value="Nowa wiadomość ze strony Przedszkole Blisko Dziecka i Natury">
+      <input type="hidden" name="from_name" value="Formularz kontaktowy – Blisko Dziecka i Natury">
+      <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" style="display:none" aria-hidden="true">
       <div class="form-row-2">
         <div class="form-group">
           <label class="form-label" for="name">imię nazwisko</label>

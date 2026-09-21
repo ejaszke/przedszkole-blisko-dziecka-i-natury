@@ -1083,6 +1083,21 @@ body.team-photo-modal-open { overflow: hidden; }
   line-height: 1.7;
 }
 
+.contact-intro {
+  max-width: 800px;
+  margin: 3rem auto 2rem;
+  padding: 0 5%;
+  text-align: center;
+}
+
+.contact-intro p {
+  font-family: var(--font-h);
+  font-size: 1.45rem;
+  font-weight: 600;
+  color: var(--teal);
+  line-height: 1.5;
+}
+
 .contact-bar a { color: var(--white); }
 
 .map-wrap {
