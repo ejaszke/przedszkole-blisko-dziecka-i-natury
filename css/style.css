@@ -936,7 +936,7 @@ body.team-photo-modal-open { overflow: hidden; }
   max-width: 760px;
   margin: 0 auto;
   padding: 3rem 5% 2.5rem;
-  font-size: 1.25rem;
+  font-size: 1.45rem;
   font-family: var(--font-h);
   font-weight: 600;
   color: var(--teal);
@@ -960,7 +960,7 @@ body.team-photo-modal-open { overflow: hidden; }
   border: none;
   color: var(--white);
   font-family: var(--font-h);
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   font-weight: 700;
   cursor: pointer;
   transition: background .2s;
@@ -1319,7 +1319,7 @@ textarea.form-control { resize: vertical; min-height: 160px; }
 @media (max-width: 640px) {
   .team-grid { grid-template-columns: repeat(2, 1fr); }
 
-  .tab-btn { font-size: .9rem; padding: .9rem .3rem; }
+  .tab-btn { font-size: 1rem; padding: .9rem .3rem; }
 
   .activities-index { grid-template-columns: 1fr; }
 
