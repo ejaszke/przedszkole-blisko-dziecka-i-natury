@@ -1,0 +1,12 @@
+backend:
+  name: turbo-github
+  turbo_site_id: 64fad1b3-2e1a-4366-acc8-22c4fb8650d1
+  branch: main
+
+locale: pl
+media_folder: assets/uploads
+public_folder: assets/uploads
+
+# Obecna strona składa się z ręcznie utrzymywanego HTML. Media można już
+# dodawać przez panel; edycja treści wymaga przeniesienia jej do plików danych.
+collections: []
