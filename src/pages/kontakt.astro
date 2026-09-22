@@ -1,3 +1,13 @@
+---
+import { getEntry } from 'astro:content';
+import { md } from '../lib/md';
+
+const entry = await getEntry('strony', 'kontakt');
+if (!entry) throw new Error('Missing content entry: strony/kontakt');
+const { data } = entry;
+const phoneDigits = String(data.phone || '').replace(/\s+/g, '');
+const mapEmbed = `https://www.google.com/maps?q=${encodeURIComponent(String(data.map_query || ''))}&z=17&output=embed`;
+---
 <!DOCTYPE html>
 <html lang="pl">
 <head>
@@ -76,11 +86,11 @@
 
   <!-- HERO -->
   <section class="hero">
-    <img src="przedszkole_named_assets/page8_hero_contact_classroom_wide.png" alt="Sala przedszkolna – Blisko Dziecka i Natury" class="hero-img">
+    <img src={data.hero_image} alt="Sala przedszkolna – Blisko Dziecka i Natury" class="hero-img">
     <div class="hero-overlay">
       <div class="hero-blob kontakt">
         <img class="hero-blob-bg" src="assets/baner_shape_kontakt.svg" alt="" aria-hidden="true">
-        <h1>Gdzie jesteśmy<br>i jak do nas trafić?</h1>
+        <h1 set:html={data.hero_h1}></h1>
       </div>
     </div>
     <div class="hero-wave">
@@ -93,22 +103,22 @@
   <!-- HEADING -->
   <div class="contact-intro">
     <h2 class="section-title">kontakt</h2>
-    <p>Zapraszamy do miejsca, w którym rozwój rozpoczyna się<br>od relacji, a każde dziecko ma przestrzeń, by rozkwitać na swój sposób!</p>
+    <p set:html={data.intro_subtitle}></p>
   </div>
 
   <!-- INFO BAR -->
   <div class="contact-bar">
-    ul. Katowicka 24, 44-240 Żory &nbsp;&nbsp;|&nbsp;&nbsp;
-    tel.: <a href="tel:690670836">690 670 836</a> &nbsp;&nbsp;|&nbsp;&nbsp;
-    <a href="mailto:biuro@bliskodzieckainatury.pl">biuro@bliskodzieckainatury.pl</a><br>
-    Poniedziałek – Piątek, w godzinach od 7.00 do 17.00
+    {data.address} &nbsp;&nbsp;|&nbsp;&nbsp;
+    tel.: <a href={`tel:${phoneDigits}`}>{data.phone}</a> &nbsp;&nbsp;|&nbsp;&nbsp;
+    <a href={`mailto:${data.email}`}>{data.email}</a><br>
+    {data.hours}
   </div>
 
   <!-- MAP -->
   <div class="map-wrap">
     <iframe
-      src="https://www.google.com/maps?q=Przedszkole%20Blisko%20Dziecka%20i%20Natury%2C%20Katowicka%2024%2C%2044-240%20%C5%BBory&amp;z=17&amp;output=embed"
-      title="Mapa Google – Przedszkole Blisko Dziecka i Natury, ul. Katowicka 24 w Żorach"
+      src={mapEmbed}
+      title={`Mapa Google – ${data.map_query}`}
       loading="lazy"
       allowfullscreen
       referrerpolicy="no-referrer-when-downgrade">
@@ -144,11 +154,7 @@
   <!-- RODO -->
   <div class="rodo-section">
     <h2 class="rodo-title">warto wiedzieć</h2>
-    <p>Administratorem podanych danych osobowych jest Przedszkole „Blisko dziecka i natury" z siedzibą w Żorach przy ul. Katowickiej 24.</p>
-    <p>Twoje dane osobowe będą przetwarzane tylko do momentu zrealizowania celu – złożenia drogą mailową lub telefoniczną odpowiedzi na Twoje pytanie.</p>
-    <p>Możesz się z nami skontaktować dzwoniąc na podany na stronie numer telefonu.</p>
-    <p>Dbamy o Twoje dane osobowe i nie przekazujemy ich innym podmiotom. Jeśli ktoś naruszy bezpieczeństwo Twoich danych osobowych, możesz skorzystać z prawa do wniesienia skargi do Prezesa Urzędu Ochrony Danych Osobowych.</p>
-    <p>Ze szczegółami dotyczącymi przetwarzania Twoich danych osobowych możesz zapoznać się w naszej <a href="polityka-prywatnosci.html" style="color:var(--teal);font-weight:600;">Polityce prywatności</a>.</p>
+    <div set:html={md(data.rodo_text)}></div>
   </div>
 
   <!-- FOOTER WAVE (blue) -->
@@ -185,6 +191,6 @@
     </div>
   </footer>
 
-  <script src="js/main.js?v=orphans-1"></script>
+  <script is:inline src="js/main.js?v=orphans-1"></script>
 </body>
 </html>

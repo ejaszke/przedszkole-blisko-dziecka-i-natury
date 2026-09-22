@@ -45,3 +45,113 @@ collections:
           - {name: adaptacja_photo, label: "Sekcja »adaptacja« – zdjęcie", widget: image}
           - {name: review_rating, label: "Opinie – średnia ocena", widget: string, pattern: ['^[0-9]+([.,][0-9])?$', "Np. 4.5"]}
           - {name: review_count, label: "Opinie – liczba opinii", widget: number, value_type: int, min: 0}
+
+      - name: nasza-idea
+        label: Nasza idea
+        file: src/content/strony/nasza-idea.md
+        extension: md
+        format: frontmatter
+        fields:
+          - {name: hero_h1, label: "Hero – H1", widget: string}
+          - {name: hero_h2, label: "Hero – H2 (podtytuł)", widget: string, hint: "Możesz użyć <br> aby złamać linię"}
+          - {name: hero_image, label: "Hero – zdjęcie", widget: image}
+          - {name: blisko_dziecka_text, label: "Sekcja »blisko dziecka« – tekst", widget: markdown}
+          - {name: blisko_natury_text, label: "Sekcja »blisko natury« – tekst", widget: markdown}
+          - {name: w_przyjaznym_otoczeniu_text, label: "Sekcja »w przyjaznym otoczeniu« – tekst", widget: markdown}
+          - {name: w_ciekawy_sposob_text, label: "Sekcja »w ciekawy i inspirujący sposób« – tekst", widget: markdown}
+          - {name: final_title, label: "Sekcja końcowa – tytuł", widget: string, hint: "Możesz użyć <br> aby złamać linię"}
+          - {name: final_text, label: "Sekcja końcowa – tekst", widget: text}
+
+      - name: nasze-grupy
+        label: Nasze grupy
+        file: src/content/strony/nasze-grupy.md
+        extension: md
+        format: frontmatter
+        fields:
+          - {name: hero_h1, label: "Hero – tytuł", widget: string, hint: "Możesz użyć <br>"}
+          - {name: hero_image, label: "Hero – zdjęcie", widget: image}
+          - {name: intro_text, label: "Intro pod hero", widget: string, hint: "Możesz użyć <br>"}
+          - {name: lesna_image, label: "Grupa Leśna – zdjęcie", widget: image}
+          - {name: lesna_text, label: "Grupa Leśna – tekst", widget: markdown}
+          - {name: integracyjna_image, label: "Grupa Integracyjna – zdjęcie", widget: image}
+          - {name: integracyjna_text, label: "Grupa Integracyjna – tekst", widget: markdown}
+          - {name: montessori_image, label: "Grupa Montessori – zdjęcie", widget: image}
+          - {name: montessori_text, label: "Grupa Montessori – tekst", widget: markdown}
+          - {name: maluszkow_image, label: "Grupa Maluszków – zdjęcie", widget: image}
+          - {name: maluszkow_text, label: "Grupa Maluszków – tekst", widget: markdown}
+
+      - name: zajecia-dodatkowe
+        label: Zajęcia dodatkowe
+        file: src/content/strony/zajecia-dodatkowe.md
+        extension: md
+        format: frontmatter
+        fields:
+          - {name: hero_h1, label: "Hero – tytuł (H1)", widget: string}
+          - {name: hero_image, label: "Hero – zdjęcie", widget: image}
+          - name: activities
+            label: Zajęcia
+            label_singular: Zajęcie
+            widget: list
+            hint: "Kolejność na liście = kolejność na stronie. »ID« służy jako kotwica (link #jezyk-angielski). Nie zmieniaj po publikacji, bo linki w menu przestaną działać."
+            fields:
+              - {name: id, label: "ID (anchor)", widget: string, pattern: ['^[a-z0-9-]+$', "Małe litery, cyfry, myślniki (np. sensoplastyka)"]}
+              - {name: title, label: "Nazwa zajęć", widget: string}
+              - {name: image, label: "Zdjęcie", widget: image}
+              - {name: text, label: "Opis", widget: markdown}
+
+      - name: rekrutacja-i-cennik
+        label: Rekrutacja i cennik
+        file: src/content/strony/rekrutacja-i-cennik.md
+        extension: md
+        format: frontmatter
+        fields:
+          - {name: hero_h1, label: "Hero – tytuł", widget: string, hint: "Możesz użyć <br>"}
+          - {name: hero_image, label: "Hero – zdjęcie", widget: image}
+          - {name: rekrutacja_text, label: "Sekcja »rekrutacja« – tekst", widget: markdown}
+          - {name: cennik_intro, label: "Sekcja »cennik« – intro nad tabelą", widget: string}
+          - name: tuition_rows
+            label: "Tabela czesnego"
+            widget: list
+            fields:
+              - {name: label, label: "Nazwa pozycji", widget: string}
+              - {name: price, label: "Kwota", widget: string, hint: "Np. »1080 zł« lub »– 150 zł«"}
+              - {name: discount, label: "To zniżka (pokaż w kolorze)", widget: boolean, required: false, default: false}
+          - {name: meals_intro, label: "Sekcja »wyżywienie« – intro", widget: text}
+          - name: meals_rows
+            label: "Tabela wyżywienia"
+            widget: list
+            fields:
+              - {name: label, label: "Nazwa", widget: string}
+              - {name: price, label: "Kwota", widget: string}
+          - {name: included_intro, label: "»Co zawiera czesne« – intro", widget: string}
+          - name: included_items
+            label: "»Co zawiera czesne« – lista punktów"
+            widget: list
+            field: {name: item, label: "Punkt", widget: string}
+
+      - name: kontakt
+        label: Kontakt
+        file: src/content/strony/kontakt.md
+        extension: md
+        format: frontmatter
+        fields:
+          - {name: hero_h1, label: "Hero – tytuł", widget: string, hint: "Możesz użyć <br>"}
+          - {name: hero_image, label: "Hero – zdjęcie", widget: image}
+          - {name: intro_subtitle, label: "Podtytuł pod »kontakt«", widget: string, hint: "Możesz użyć <br>"}
+          - {name: address, label: "Adres", widget: string}
+          - {name: phone, label: "Telefon", widget: string}
+          - {name: email, label: "Email", widget: string}
+          - {name: hours, label: "Godziny otwarcia", widget: string}
+          - {name: map_query, label: "Zapytanie do map Google", widget: string, hint: "Adres/nazwa lokalizacji dla iframe z mapą"}
+          - {name: rodo_text, label: "Sekcja »warto wiedzieć« (RODO)", widget: markdown}
+
+      - name: polityka-prywatnosci
+        label: Polityka prywatności
+        file: src/content/strony/polityka-prywatnosci.md
+        extension: md
+        format: frontmatter
+        fields:
+          - {name: hero_h1, label: "Hero – tytuł", widget: string, hint: "Możesz użyć <br>"}
+          - {name: hero_image, label: "Hero – zdjęcie", widget: image}
+          - {name: main_title, label: "Główny tytuł nad tekstem", widget: string, hint: "Możesz użyć <br>"}
+          - {name: body, label: "Treść polityki (markdown)", widget: markdown, hint: "Nagłówki: ### 1. Tytuł sekcji. Puste linie rozdzielają akapity."}

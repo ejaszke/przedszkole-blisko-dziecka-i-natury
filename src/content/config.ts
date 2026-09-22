@@ -11,15 +11,7 @@ const zespol = defineCollection({
 
 const strony = defineCollection({
   type: 'content',
-  schema: z.object({
-    hero_title: z.string(),
-    hero_image: z.string(),
-    o_nas_photo: z.string(),
-    adaptacja_text: z.string(),
-    adaptacja_photo: z.string(),
-    review_rating: z.string(),
-    review_count: z.number(),
-  }),
+  schema: z.record(z.any()),
 });
 
 export const collections = { zespol, strony };

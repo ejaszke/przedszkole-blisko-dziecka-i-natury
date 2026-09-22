@@ -1,19 +1,27 @@
+---
+import { getEntry } from 'astro:content';
+import { md } from '../lib/md';
+
+const entry = await getEntry('strony', 'nasza-idea');
+if (!entry) throw new Error('Missing content entry: strony/nasza-idea');
+const { data } = entry;
+---
 <!DOCTYPE html>
 <html lang="pl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rekrutacja i Cennik – Przedszkole Blisko Dziecka i Natury</title>
-  <link rel="stylesheet" href="css/style.css?v=social-icons-3">
+  <title>Nasza Idea – Przedszkole Blisko Dziecka i Natury</title>
+  <link rel="stylesheet" href="css/style.css?v=idea-layout-5">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="icon" type="image/png" href="favicon.png">
 </head>
-<body>
+<body class="idea-page">
 
   <svg aria-hidden="true" focusable="false" style="position:absolute;width:0;height:0;overflow:hidden">
     <defs>
       <clipPath id="blob-hero" clipPathUnits="objectBoundingBox">
-        <path d="M 0.50,0.02 C 0.72,-0.05 1.02,0.06 0.98,0.22 C 0.94,0.38 1.04,0.66 0.96,0.82 C 0.88,0.98 0.64,1.06 0.40,1.00 C 0.16,0.94 -0.04,0.78 0.04,0.54 C 0.14,0.30 0.28,-0.04 0.50,0.02 Z"/>
+        <path d="M 0.1267,0.5733 c 0.0209,0.1134,0.0975,0.2199,0.2071,0.2528 0.0813,0.0245,0.1696,0.0071,0.2509,-0.0193 0.1018,-0.0332,0.2031,-0.0829,0.2693,-0.1677 0.0663,-0.0848,0.0890,-0.2109,0.0307,-0.3003 -0.0607,-0.0935,-0.1828,-0.1199,-0.2926,-0.1385 -0.1163,-0.0199,-0.2813,-0.0484,-0.3874,0.0255 -0.0905,0.0634,-0.0963,0.2506,-0.0785,0.3475 Z"/>
       </clipPath>
       <clipPath id="blob-groups" clipPathUnits="objectBoundingBox">
         <path d="M0.174 0.191 C0.226 0.090 0.337 0.096 0.435 0.105 C0.542 0.116 0.649 0.129 0.722 0.215 C0.800 0.308 0.839 0.463 0.817 0.604 C0.796 0.737 0.710 0.807 0.619 0.855 C0.533 0.900 0.435 0.906 0.343 0.881 C0.243 0.854 0.139 0.797 0.091 0.675 C0.046 0.560 0.078 0.425 0.107 0.320 C0.124 0.261 0.148 0.242 0.174 0.191 Z"/>
@@ -34,14 +42,14 @@
       <li class="nav-item dropdown">
         <a href="index.html#o-nas" class="nav-link">o nas</a>
         <div class="dropdown-menu">
-          <a href="index.html#o-nas"     class="dropdown-item">o nas</a>
-          <a href="index.html#adaptacja" class="dropdown-item">adaptacja</a>
-          <a href="nasza-idea.html"      class="dropdown-item">nasza idea</a>
-          <a href="nasz-zespol.html"     class="dropdown-item">nasz zespół</a>
-          <a href="index.html#opinie"    class="dropdown-item">opinie mam ★★★</a>
+          <a href="index.html#o-nas"        class="dropdown-item">o nas</a>
+          <a href="index.html#adaptacja"    class="dropdown-item">adaptacja</a>
+          <a href="nasza-idea.html"         class="dropdown-item">nasza idea</a>
+          <a href="nasz-zespol.html"        class="dropdown-item">nasz zespół</a>
+          <a href="index.html#opinie"       class="dropdown-item">opinie mam ★★★</a>
         </div>
       </li>
-      <li class="nav-item"><a href="nasza-idea.html"         class="nav-link">nasza idea</a></li>
+      <li class="nav-item"><a href="nasza-idea.html"         class="nav-link active">nasza idea</a></li>
       <li class="nav-item"><a href="nasz-zespol.html"        class="nav-link">nasz zespół</a></li>
       <li class="nav-item"><a href="nasze-grupy.html"        class="nav-link">nasze grupy</a></li>
       <li class="nav-item dropdown">
@@ -58,13 +66,13 @@
           <a href="zajecia-dodatkowe.html#zabawy-ze-sztuka"     class="dropdown-item">zabawy ze sztuką</a>
         </div>
       </li>
-      <li class="nav-item"><a href="rekrutacja-i-cennik.html"  class="nav-link active">rekrutacja i cennik</a></li>
+      <li class="nav-item"><a href="rekrutacja-i-cennik.html"  class="nav-link">rekrutacja i cennik</a></li>
       <li class="nav-item"><a href="polityka-prywatnosci.html" class="nav-link">polityka prywatności</a></li>
       <li class="nav-item"><a href="kontakt.html"              class="nav-link">kontakt</a></li>
     </ul>
     <div class="navbar-social">
       <a href="https://www.facebook.com/profile.php?id=100063724263442" title="Facebook" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
-      <a href="https://www.instagram.com/blisko_dziecka_i_natury/" class="insta" title="Instagram" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.instagram.com/blisko_dziecka_i_natury/" title="Instagram" class="insta" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
     </div>
   </nav>
 
@@ -75,92 +83,83 @@
   </div>
 
   <!-- HERO -->
-  <section class="hero">
-    <img src="materialy/cennik i polityka/cennik_w_menu.jpg" alt="Rekrutacja i cennik" class="hero-img">
-    <div class="hero-overlay">
-      <div class="hero-blob teal">
-        <img class="hero-blob-bg" src="materialy/polityka/baner_shape_cennik.svg" alt="" aria-hidden="true">
-        <h1>rekrutacja i<br>cennik</h1>
+  <section class="hero hero--idea">
+    <img src={data.hero_image} alt="Nasza idea – bliżej dziecka i natury" class="hero-img">
+    <div class="hero-overlay left">
+      <div class="hero-blob white left">
+        <img class="hero-blob-bg" src="assets/baner_shape_nasza_idea.svg" alt="" aria-hidden="true">
+        <h1 set:html={data.hero_h1}></h1>
+        <h2 set:html={data.hero_h2}></h2>
       </div>
     </div>
     <div class="hero-wave">
-      <svg viewBox="0 0 1200 55" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M0,28 C26,55 53,0 80,28 C106,55 133,0 160,28 C186,55 213,0 240,28 C266,55 293,0 320,28 C346,55 373,0 400,28 C426,55 453,0 480,28 C506,55 533,0 560,28 C586,55 613,0 640,28 C666,55 693,0 720,28 C746,55 773,0 800,28 C826,55 853,0 880,28 C906,55 933,0 960,28 C986,55 1013,0 1040,28 C1066,55 1093,0 1120,28 C1146,55 1173,0 1200,28 L1200,55 L0,55 Z" fill="#fff"/>
+      <svg viewBox="0 0 1440 100" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M0,55 C9.0,22 27.0,22 36.0,55 C45.0,88 63.0,88 72.0,55 C81.0,22 99.0,22 108.0,55 C117.0,88 135.0,88 144.0,55 C153.0,22 171.0,22 180.0,55 C189.0,88 207.0,88 216.0,55 C225.0,22 243.0,22 252.0,55 C261.0,88 279.0,88 288.0,55 C297.0,22 315.0,22 324.0,55 C333.0,88 351.0,88 360.0,55 C369.0,22 387.0,22 396.0,55 C405.0,88 423.0,88 432.0,55 C441.0,22 459.0,22 468.0,55 C477.0,88 495.0,88 504.0,55 C513.0,22 531.0,22 540.0,55 C549.0,88 567.0,88 576.0,55 C585.0,22 603.0,22 612.0,55 C621.0,88 639.0,88 648.0,55 C657.0,22 675.0,22 684.0,55 C693.0,88 711.0,88 720.0,55 C729.0,22 747.0,22 756.0,55 C765.0,88 783.0,88 792.0,55 C801.0,22 819.0,22 828.0,55 C837.0,88 855.0,88 864.0,55 C873.0,22 891.0,22 900.0,55 C909.0,88 927.0,88 936.0,55 C945.0,22 963.0,22 972.0,55 C981.0,88 999.0,88 1008.0,55 C1017.0,22 1035.0,22 1044.0,55 C1053.0,88 1071.0,88 1080.0,55 C1089.0,22 1107.0,22 1116.0,55 C1125.0,88 1143.0,88 1152.0,55 C1161.0,22 1179.0,22 1188.0,55 C1197.0,88 1215.0,88 1224.0,55 C1233.0,22 1251.0,22 1260.0,55 C1269.0,88 1287.0,88 1296.0,55 C1305.0,22 1323.0,22 1332.0,55 C1341.0,88 1359.0,88 1368.0,55 C1377.0,22 1395.0,22 1404.0,55 C1413.0,88 1431.0,88 1440.0,55 L1440,100 L0,100 Z" fill="#fff"/>
       </svg>
     </div>
   </section>
 
-  <!-- CONTENT -->
-  <section class="section">
-
-    <!-- REKRUTACJA -->
-    <h2 class="section-title">rekrutacja</h2>
-    <p style="max-width:720px;margin-bottom:1rem;">Zapisy na rok szkolny 2026/2027 rozpoczynają się <strong>30 stycznia</strong>. Aby zapisać dziecko, skontaktuj się z nami telefonicznie pod numer <a href="tel:690670836" style="color:var(--teal);font-weight:700;">690 670 836</a> lub prześlij wypełniony formularz zgłoszeniowy na adres <a href="mailto:biuro@bliskodzieckainatury.pl" style="color:var(--teal);">biuro@bliskodzieckainatury.pl</a>.</p>
-    <p style="max-width:720px;margin-bottom:3rem;">Po otrzymaniu ankiety nawiążemy kontakt telefoniczny w celu omówienia szczegółów i podpisania umowy.</p>
-
-    <!-- CENNIK -->
-    <h2 class="section-title" style="margin-top:1rem;">cennik</h2>
-    <p style="max-width:720px;margin-bottom:2rem;">Cennik na rok szkolny 2026/2027:</p>
-
-    <div style="max-width:680px;">
-      <!-- Tabela czesnego -->
-      <table style="width:100%;border-collapse:collapse;margin-bottom:2.5rem;font-size:.95rem;">
-        <thead>
-          <tr style="background:var(--teal);color:#fff;">
-            <th style="padding:1rem 1.25rem;text-align:left;font-family:var(--font-h);font-size:1rem;border-radius:10px 0 0 0;">Rodzaj pobytu</th>
-            <th style="padding:1rem 1.25rem;text-align:right;font-family:var(--font-h);font-size:1rem;border-radius:0 10px 0 0;">Czesne miesięczne</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr style="background:#f9f9f9;">
-            <td style="padding:.9rem 1.25rem;border-bottom:1px solid #eee;">Pobyt powyżej godz. 13.00</td>
-            <td style="padding:.9rem 1.25rem;border-bottom:1px solid #eee;text-align:right;font-weight:700;">1080 zł</td>
-          </tr>
-          <tr>
-            <td style="padding:.9rem 1.25rem;border-bottom:1px solid #eee;">Pobyt do godz. 13.00</td>
-            <td style="padding:.9rem 1.25rem;border-bottom:1px solid #eee;text-align:right;font-weight:700;">980 zł</td>
-          </tr>
-          <tr style="background:#f9f9f9;">
-            <td style="padding:.9rem 1.25rem;">Zniżka dla rodzeństwa</td>
-            <td style="padding:.9rem 1.25rem;text-align:right;font-weight:700;color:var(--teal-dark);">– 150 zł</td>
-          </tr>
-        </tbody>
-      </table>
-
-      <!-- Wyżywienie -->
-      <h3 style="font-family:var(--font-h);font-size:1.4rem;color:var(--teal);margin-bottom:1rem;">wyżywienie</h3>
-      <p style="margin-bottom:1rem;">Catering obejmuje śniadanie, obiad i podwieczorek – posiłki planowane są przez dietetyka.</p>
-      <table style="width:100%;border-collapse:collapse;margin-bottom:2.5rem;font-size:.95rem;">
-        <thead>
-          <tr style="background:var(--teal);color:#fff;">
-            <th style="padding:1rem 1.25rem;text-align:left;font-family:var(--font-h);font-size:1rem;border-radius:10px 0 0 0;">Rodzaj wyżywienia</th>
-            <th style="padding:1rem 1.25rem;text-align:right;font-family:var(--font-h);font-size:1rem;border-radius:0 10px 0 0;">Koszt dzienny</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr style="background:#f9f9f9;">
-            <td style="padding:.9rem 1.25rem;border-bottom:1px solid #eee;">Standardowe</td>
-            <td style="padding:.9rem 1.25rem;border-bottom:1px solid #eee;text-align:right;font-weight:700;">25 zł</td>
-          </tr>
-          <tr>
-            <td style="padding:.9rem 1.25rem;">Wegetariańskie / wegańskie / bezmleczne</td>
-            <td style="padding:.9rem 1.25rem;text-align:right;font-weight:700;">27 zł</td>
-          </tr>
-        </tbody>
-      </table>
-
-      <!-- Co zawiera czesne -->
-      <h3 style="font-family:var(--font-h);font-size:1.4rem;color:var(--teal);margin-bottom:1rem;">co zawiera czesne?</h3>
-      <p style="margin-bottom:.5rem;">W ramach czesnego zapewniamy:</p>
-      <ul style="list-style:disc;padding-left:1.5rem;line-height:2;font-size:.95rem;">
-        <li>Zajęcia dodatkowe prowadzone przez specjalistów spoza placówki: angielski (2× w tygodniu), muzyka, joga, logopedia, drama, przyroda, sztuka, arteterapia, ceramika</li>
-        <li>Codzienny dostęp do mini zoo z kozami i kucykami</li>
-        <li>Duże i przestronne sale z wysokiej jakości wyposażeniem</li>
-        <li>Oczyszczacze powietrza w każdej sali</li>
-        <li>Starannie planowane posiłki dostosowane do potrzeb dzieci</li>
-      </ul>
+  <!-- BLISKO DZIECKA -->
+  <section class="section idea-content" id="idea-content">
+    <div class="row-content idea-row">
+      <div class="col-text">
+        <div class="idea-copy" id="idea-copy-child" set:html={md(data.blisko_dziecka_text)}></div>
+      </div>
+      <div class="col-img idea-feature">
+        <h2 class="idea-feature-title">blisko<br>dziecka</h2>
+        <img src="assets/blisko-dziecka.png" alt="Lisie ilustracje symbolizujące bliskość z dzieckiem" class="idea-feature-art">
+      </div>
     </div>
 
+    <!-- BLISKO NATURY -->
+    <div class="row-content reverse idea-row">
+      <div class="col-text">
+        <div class="idea-copy" id="idea-copy-nature" set:html={md(data.blisko_natury_text)}></div>
+      </div>
+      <div class="col-img idea-feature">
+        <h2 class="idea-feature-title">blisko<br>natury</h2>
+        <img src="assets/blisko-natury.png" alt="Lis przy drzewie – symbol bliskości z naturą" class="idea-feature-art">
+      </div>
+    </div>
+
+    <!-- W PRZYJAZNYM OTOCZENIU -->
+    <div class="row-content idea-row">
+      <div class="col-text">
+        <div class="idea-copy" id="idea-copy-surroundings" set:html={md(data.w_przyjaznym_otoczeniu_text)}></div>
+      </div>
+      <div class="col-img idea-feature">
+        <h2 class="idea-feature-title">w przyjaznym<br>otoczeniu</h2>
+        <img src="assets/w-przyjazdnym-otoczeniu.png" alt="Kolorowa tęcza – symbol przyjaznego otoczenia" class="idea-feature-art idea-feature-art--small">
+      </div>
+    </div>
+
+    <!-- W CIEKAWY SPOSÓB -->
+    <div class="row-content reverse idea-row">
+      <div class="col-text">
+        <div class="idea-copy" id="idea-copy-inspiring" set:html={md(data.w_ciekawy_sposob_text)}></div>
+      </div>
+      <div class="col-img idea-feature">
+        <h2 class="idea-feature-title">w ciekawy<br>i inspirujący<br>sposób</h2>
+        <img src="assets/w-ciekawy-i-inspirujacy-sposob.png" alt="Ślady łap – symbol odkrywania" class="idea-feature-art idea-feature-art--tiny">
+      </div>
+    </div>
+
+    <!-- PRYWATNOŚĆ I WSPÓŁPRACA -->
+    <div class="idea-final">
+      <div class="idea-final-copy">
+        <h2 class="idea-final-title" set:html={data.final_title}></h2>
+        <p>{data.final_text}</p>
+      </div>
+      <div class="idea-final-art">
+        <img src="assets/w-poszukiwaniu-prywatnosci.png" alt="Lisy rozmawiające o współpracy">
+      </div>
+    </div>
+
+    <div class="idea-gallery">
+      <img src="assets/foto_nasza_idea_1.png" alt="Przedszkolna przestrzeń do zabawy">
+      <img src="assets/foto_nasza_idea_2.png" alt="Kącik z książkami dla dzieci">
+      <img src="assets/foto_nasza_idea_3.png" alt="Przedszkolna sala">
+    </div>
   </section>
 
   <!-- FOOTER WAVE -->
@@ -197,6 +196,6 @@
     </div>
   </footer>
 
-  <script src="js/main.js?v=orphans-1"></script>
+  <script is:inline src="js/main.js?v=orphans-1"></script>
 </body>
 </html>
