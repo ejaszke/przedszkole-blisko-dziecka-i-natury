@@ -9,24 +9,19 @@
 <body>
   <script src="https://unpkg.com/decap-cms@beta/dist/decap-cms.js"></script>
   <script>
-    CMS.registerPreviewStyle('/przedszkole-blisko-dziecka-i-natury/css/style.css');
-    CMS.registerPreviewStyle(
-      'data:text/css;charset=utf-8,' +
-      encodeURIComponent(
-        'body{padding:2rem 1.5rem;background:#fff;}' +
-        '.team-detail-item{max-width:520px;}'
-      )
-    );
+    var adminBase = new URL('.', window.location.href);
+    CMS.registerPreviewStyle(new URL('../css/style.css', adminBase).href);
+    CMS.registerPreviewStyle(new URL('preview.css', adminBase).href);
 
     var ZespolPreview = createClass({
       render: function () {
         var entry = this.props.entry;
         var name = entry.getIn(['data', 'name']) || '';
         var image = entry.getIn(['data', 'image']) || '';
-        return h('div', { className: 'team-detail-item' },
-          image ? h('img', { src: image, alt: name }) : null,
-          h('div', { className: 'team-detail-info' },
-            h('h3', {}, name),
+        return h('article', { className: 'cms-team-preview' },
+          image ? h('img', { className: 'cms-team-preview__image', src: image, alt: name }) : null,
+          h('div', { className: 'cms-team-preview__content' },
+            h('h1', {}, name),
             this.props.widgetFor('body')
           )
         );
@@ -34,6 +29,56 @@
     });
 
     CMS.registerPreviewTemplate('zespol', ZespolPreview);
+
+    function getText(data, names) {
+      for (var i = 0; i < names.length; i += 1) {
+        var value = data.get(names[i]);
+        if (value) return String(value).replace(/[#*_`]/g, '').replace(/\n+/g, ' ');
+      }
+      return '';
+    }
+
+    var PagePreview = createClass({
+      render: function () {
+        var data = this.props.entry.get('data');
+        var title = getText(data, ['hero_h1', 'hero_title', 'main_title']) || this.props.entry.get('label') || 'Podgląd strony';
+        var image = getText(data, ['hero_image']);
+        var intro = getText(data, ['body', 'intro_text', 'intro_subtitle', 'rekrutacja_text', 'rodo_text', 'final_text']);
+        var fields = [
+          ['Adres', getText(data, ['address'])],
+          ['Telefon', getText(data, ['phone'])],
+          ['E-mail', getText(data, ['email'])],
+          ['Godziny', getText(data, ['hours'])]
+        ].filter(function (field) { return field[1]; });
+
+        return h('article', { className: 'cms-page-preview' },
+          h('header', {
+            className: 'cms-page-preview__hero',
+            style: image ? { backgroundImage: 'url(' + image + ')' } : null
+          },
+            h('div', {},
+              h('p', { className: 'cms-page-preview__kicker' }, 'podgląd strony'),
+              h('h1', {}, title)
+            )
+          ),
+          h('section', { className: 'cms-page-preview__content' },
+            h('h2', {}, 'Treść strony'),
+            intro ? h('p', {}, intro) : h('p', {}, 'Uzupełnij pola po lewej stronie — tutaj zobaczysz ich styl w serwisie.'),
+            fields.length ? h('div', { className: 'cms-page-preview__fields' },
+              fields.map(function (field) {
+                return h('div', { className: 'cms-page-preview__field', key: field[0] },
+                  h('strong', {}, field[0]),
+                  h('span', {}, field[1])
+                );
+              })
+            ) : null
+          )
+        );
+      }
+    });
+
+    ['home', 'nasza-idea', 'nasze-grupy', 'zajecia-dodatkowe', 'rekrutacja-i-cennik', 'kontakt', 'polityka-prywatnosci']
+      .forEach(function (name) { CMS.registerPreviewTemplate(name, PagePreview); });
   </script>
 </body>
 </html>
