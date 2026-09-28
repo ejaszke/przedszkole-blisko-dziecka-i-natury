@@ -51,31 +51,3 @@ Serwis może zawierać linki do stron trzecich. Zalecamy zapoznanie się z ich p
 ### 12. Zmiany polityki
 
 Administrator zastrzega prawo do zmian niniejszej polityki, w szczególności w przypadku rozwoju serwisu, rozwoju technologii lub zmian w obowiązujących przepisach prawa.
-
-<hr class="policy-divider">
-
-## klauzula informacyjna
-
-### Administrator Ankiety
-
-Administratorem danych z Ankiety dla rodziców jest Przedszkole Blisko Dziecka i Natury z siedzibą przy ul. Katowickiej 24 w Żorach (44-240).
-
-### Cele przetwarzania danych
-
-Dane przetwarzane są na potrzeby rekrutacji, zawarcia umowy opieki, uzyskania informacji o dziecku i rodzinie oraz ustalenia lub dochodzenia ewentualnych roszczeń.
-
-### Przekazywanie danych trzecim podmiotom
-
-Dane mogą być przekazywane wyłącznie dostawcom usług wsparcia (informatyczne, prawne) lub organom upoważnionym prawnie.
-
-### Okres przechowywania
-
-Dane przechowywane są do rezygnacji z umowy (w przypadku braku przyjęcia) lub przez okres trwania opieki powiększony o okres przedawnienia ewentualnych roszczeń.
-
-### Prawa użytkowników
-
-Osoby posiadają prawo do dostępu, sprostowania, usunięcia, ograniczenia przetwarzania i wycofania zgody na każdym etapie, bez wpływu na zgodność z prawem przetwarzania przed wycofaniem zgody.
-
-### Dobrowolność danych
-
-Podanie danych dziecka i rodziców jest obowiązkowe do zawarcia umowy. Pozostałe pola oznaczone gwiazdką są dobrowolne. Dane nie będą przetwarzane automatycznie ani przekazywane poza Europejski Obszar Gospodarczy.
