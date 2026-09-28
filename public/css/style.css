@@ -1711,26 +1711,6 @@ textarea.form-control { resize: vertical; min-height: 160px; }
   object-fit: contain;
 }
 
-.activities-page #jezyk-angielski .col-img img {
-  height: 245px;
-  clip-path: url(#blob-groups);
-  object-fit: cover;
-}
-
-.activities-page #jezyk-angielski .col-img::after {
-  content: '';
-  position: absolute;
-  right: -.25rem;
-  bottom: 1rem;
-  z-index: 2;
-  width: 54px;
-  height: 68px;
-  border: 17px solid #ffc400;
-  border-bottom: 0;
-  border-radius: 44px 44px 0 0;
-  transform: rotate(8deg);
-  pointer-events: none;
-}
 
 .activities-page .activity-title {
   color: #167c70;
