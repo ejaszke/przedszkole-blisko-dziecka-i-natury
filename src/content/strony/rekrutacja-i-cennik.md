@@ -1,5 +1,5 @@
 ---
-hero_h1: "rekrutacja i<br>cennik"
+hero_h1: "rekrutacja<br>i cennik"
 hero_image: /przedszkole-blisko-dziecka-i-natury/materialy/cennik i polityka/cennik_w_menu.jpg
 rekrutacja_text: |
   Zapisy na rok szkolny 2026/2027 rozpoczynają się **30 stycznia**. Aby zapisać dziecko, skontaktuj się z nami telefonicznie pod numer [690 670 836](tel:690670836) lub prześlij wypełniony formularz zgłoszeniowy na adres [biuro@bliskodzieckainatury.pl](mailto:biuro@bliskodzieckainatury.pl).
