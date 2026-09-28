@@ -1,6 +1,6 @@
 ---
 hero_h1: "Gdzie jesteśmy<br>i jak do nas trafić?"
-hero_image: /przedszkole-blisko-dziecka-i-natury/przedszkole_named_assets/page8_hero_contact_classroom_wide.png
+hero_image: /przedszkole-blisko-dziecka-i-natury/materialy/kontakt/kontakt_w_menu.jpg
 intro_subtitle: "Zapraszamy do miejsca, w którym rozwój rozpoczyna się<br>od relacji, a każde dziecko ma przestrzeń, by rozkwitać na swój sposób!"
 address: "ul. Katowicka 24, 44-240 Żory"
 phone: "690 670 836"
