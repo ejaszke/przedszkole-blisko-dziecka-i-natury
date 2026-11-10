@@ -1179,7 +1179,8 @@ textarea.form-control { resize: vertical; min-height: 160px; }
 
 .footer-wave-wrap {
   line-height: 0;
-  overflow: hidden;
+  overflow-x: clip;
+  overflow-y: visible;
   position: relative;
   margin-bottom: -1px;
 }
