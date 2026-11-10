@@ -7,13 +7,13 @@ activities:
     title: język angielski
     image: /przedszkole-blisko-dziecka-i-natury/materialy/foto_zaj_dod_angielski_2.png
     text: >
-      Dzięki metodzie zanurzenia w języku, a także za sprawą wykorzystania
-      różnorodnych aktywności i pomocy dydaktycznych dzieci w sposób naturalny
-      chłoną język obcy, z otwartością powtarzając i utrwalając poznane
-      zagadnienia.
-
-
-      Podczas zajęć zapraszamy dzieci do wspólnego nazywania określonych elementów przy użyciu pełnych konstrukcji zdaniowych. Śpiewamy piosenki oraz proponujemy dzieciom wspólne zabawy ruchowe dla skuteczniejszego utrwalenia informacji.
+      „Learning English is child's play" – nauka angielskiego poprzez zabawę.
+      Naturalne nabywanie języka w wieku przedszkolnym opieramy na zabawie,
+      ruchu i przyswajaniu słownictwa w naturalnych sytuacjach życia
+      codziennego. Budujemy motywację, tolerancję wobec innych kultur i narodów
+      oraz rozwijamy podstawowe umiejętności komunikacyjne poprzez angażowanie
+      wszystkich zmysłów, aby uzyskać wysokie wyniki nauczania. „English is
+      fun – Angielski to radość i zabawa".
   - id: logopedia
     title: logopedia
     image: /przedszkole-blisko-dziecka-i-natury/assets/foto_zaj_dod_logopedia.png
@@ -95,18 +95,31 @@ activities:
 
       Podczas zajęć wspólnie podróżujemy przez świat technik wyrazu artystycznego, takich jak grafika, malarstwo, rzeźba i filcowanie. Kształtujemy wrażliwość na sztukę i rozwijamy ekspresję twórczą, pomagając dzieciom znaleźć odpowiednie dla siebie środki wyrazu.
   - id: zajecia-lesne
-    title: zajęcia leśne
-    image: /przedszkole-blisko-dziecka-i-natury/assets/foto_zaj_dod_zajecia_lesne.png
+    title: leśne wędrowanie
+    image: /przedszkole-blisko-dziecka-i-natury/assets/foto_zaj_dod_lesne_wedrowanie.png
     text: >-
-      Każdego miesiąca spotykamy się z Fundacją Leśne Projekty, by razem z nimi
-      poznawać okoliczny las. Warsztaty leśne odbywają się cyklicznie i zawsze
-      zgodnie z rytmem natury – dostosowujemy się do sezonowych zmian w
-      przyrodzie i do potrzeb dzieci, odpowiadając na ich energię i podążając za
-      ciekawością.
-
-
-      Podczas zajęć doświadczamy przyrody wszystkimi zmysłami; obserwujemy, dotykamy, nasłuchujemy, wąchamy, czasami smakujemy. Używamy lup i lornetek, eksperymentujemy, budujemy, podążamy za tropami, a po zajęciach bujamy się w hamakach. Leśnym zajęciom często towarzyszy opowieść, która wprowadza dzieci w temat warsztatów.
-
-
-      Aktywności wspierają zdolności poznawcze i wiedzę przyrodniczą, a także rozwój dużej i małej motoryki, koordynację ruchową oraz integrację sensoryczną.
+      W naszym Leśnym Wędrowaniu las staje się przyjacielem dzieci, kompanem
+      do zabawy i miejscem pełnym niespodzianek. Wędrujemy, zatrzymujemy się,
+      słuchamy i odkrywamy go wszystkimi zmysłami. Uczymy się uważności,
+      poznajemy leśnych mieszkańców, których na co dzień możemy nie zauważyć.
+      W leśnej zieleni szukamy spokoju i inspiracji.
+  - id: teatr
+    title: teatr
+    image: /przedszkole-blisko-dziecka-i-natury/assets/foto_zaj_dod_teatr.png
+    text: >-
+      W naszym teatrze tworzymy przestrzeń do swobodnej zabawy, odkrywania
+      i twórczego eksperymentowania. Rozwijamy świadomość ciała, ruchu i gestu,
+      odkrywamy możliwości głosu i uczymy się wyrażać siebie poprzez naturalną,
+      autentyczną ekspresję. Wspólnie tworzymy sceniczne światy, budujemy
+      scenografię i pozwalamy wyobraźni prowadzić nas ku niezwykłym przygodom.
+  - id: roztanczona-sztuka
+    title: roztańczona sztuka
+    image: /przedszkole-blisko-dziecka-i-natury/assets/foto_zaj_dod_roztanczona_sztuka.png
+    text: >-
+      To tu spotykają się ruch, obraz, kreska i wyobraźnia. Budzimy kreatywny
+      ruch, tańczymy, a później tworzymy i eksperymentujemy. Poznajemy
+      niezwykłych artystów i zaglądamy do ich twórczych światów, czerpiąc z
+      nich inspirację do własnych działań. To przestrzeń, w której można
+      tworzyć bez gotowego przepisu, podążać za własnym pomysłem i odkrywać
+      radość płynącą ze sztuki.
 ---
