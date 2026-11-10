@@ -98,9 +98,9 @@ activities:
     title: zajęcia leśne
     image: /przedszkole-blisko-dziecka-i-natury/assets/foto_zaj_dod_zajecia_lesne.png
     text: >-
-      **Każdego** miesiąca spotykamy się z Fundacją Leśne Projekty, by razem z
-      nimi poznawać okoliczny las. Warsztaty leśne odbywają się cyklicznie i
-      zawsze zgodnie z rytmem natury – dostosowujemy się do sezonowych zmian w
+      Każdego miesiąca spotykamy się z Fundacją Leśne Projekty, by razem z nimi
+      poznawać okoliczny las. Warsztaty leśne odbywają się cyklicznie i zawsze
+      zgodnie z rytmem natury – dostosowujemy się do sezonowych zmian w
       przyrodzie i do potrzeb dzieci, odpowiadając na ich energię i podążając za
       ciekawością.
 
