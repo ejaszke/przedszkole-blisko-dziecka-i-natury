@@ -5,6 +5,12 @@ backend:
 
 locale: pl
 
+# Produkcyjny adres strony — Decap używa go w podglądach wpisów oraz do
+# wyświetlenia linku „View live" w panelu.
+site_url: https://bliskodzieckainatury.pl
+display_url: https://bliskodzieckainatury.pl
+logo_url: https://bliskodzieckainatury.pl/logo_przedszkole.png
+
 # Uploady lądują w public/assets/uploads (repo). Pod własną domeną ścieżka
 # publiczna jest bez prefiksu projektu — strona serwuje assety z root.
 media_folder: public/assets/uploads
