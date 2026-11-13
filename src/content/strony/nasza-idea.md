@@ -1,7 +1,7 @@
 ---
 hero_h1: nasza idea
 hero_h2: blisko dziecka,<br>blisko natury<br>z szacunkiem<br>i uważnością
-hero_image: /przedszkole-blisko-dziecka-i-natury/przedszkole_named_assets/page3_hero_blue_mirror.png
+hero_image: /przedszkole_named_assets/page3_hero_blue_mirror.png
 blisko_dziecka_text: >
   Dbanie o harmonijny rozwój dziecka w przyjaznym dla niego otoczeniu jest
   jednym z najważniejszych założeń naszego przedszkola. Podstawą jest dla nas

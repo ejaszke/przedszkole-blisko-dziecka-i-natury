@@ -1,14 +1,14 @@
 ---
 hero_title: "Nasze przedszkole to bezpieczne, przyjazne i&nbsp;inspirujące miejsce dla dzieci"
-hero_image: /przedszkole-blisko-dziecka-i-natury/przedszkole_named_assets/page2_hero_child_frog.png
-o_nas_photo: /przedszkole-blisko-dziecka-i-natury/assets/foto_o_nas.png
+hero_image: /przedszkole_named_assets/page2_hero_child_frog.png
+o_nas_photo: /assets/foto_o_nas.png
 adaptacja_text: >-
   Czas adaptacji dedykujemy indywidualnie rodzinie, która chce zacząć przygodę
   z naszym przedszkolem. Zakładamy, że rodzic może towarzyszyć dziecku podczas
   poznawania placówki. Ma również możliwość zaplanować proces adaptacji swojego
   dziecka wraz z nauczycielem prowadzącym oraz w razie potrzeby otrzymać
   potrzebne wsparcie dla siebie i dziecka.
-adaptacja_photo: /przedszkole-blisko-dziecka-i-natury/assets/foto_adaptacja.png
+adaptacja_photo: /assets/foto_adaptacja.png
 review_rating: "4.5"
 review_count: 16
 ---

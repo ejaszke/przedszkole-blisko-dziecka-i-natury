@@ -1,11 +1,11 @@
 ---
 hero_h1: zajęcia te mają na celu rozbudzanie zainteresowań i pasji, stymulowanie
   rozwoju u najmłodszych
-hero_image: /przedszkole-blisko-dziecka-i-natury/materialy/grupy/zaj_dodatkowe_w_menu.jpg
+hero_image: /materialy/grupy/zaj_dodatkowe_w_menu.jpg
 activities:
   - id: jezyk-angielski
     title: język angielski
-    image: /przedszkole-blisko-dziecka-i-natury/materialy/foto_zaj_dod_angielski_2.png
+    image: /materialy/foto_zaj_dod_angielski_2.png
     text: >
       „Learning English is child's play" – nauka angielskiego poprzez zabawę.
       Naturalne nabywanie języka w wieku przedszkolnym opieramy na zabawie,
@@ -16,7 +16,7 @@ activities:
       fun – Angielski to radość i zabawa".
   - id: logopedia
     title: logopedia
-    image: /przedszkole-blisko-dziecka-i-natury/assets/foto_zaj_dod_logopedia.png
+    image: /assets/foto_zaj_dod_logopedia.png
     text: >
       Zajęcia logopedyczne prowadzone są w przyjaznej dla dzieci atmosferze.
       Logopeda prowadzi diagnozę logopedyczną obejmującą przesiewowe badania
@@ -27,7 +27,7 @@ activities:
       Terapia obejmuje korygowanie wad wymowy, utrwalanie poprawnej wymowy, sprawnianie narządów artykulacyjnych, rozwijanie mowy czynnej i biernej oraz usprawnianie procesów analizy i syntezy słuchowej.
   - id: joga
     title: joga
-    image: /przedszkole-blisko-dziecka-i-natury/assets/foto_zaj_dod_joga.png
+    image: /assets/foto_zaj_dod_joga.png
     text: >
       Joga w naszym przedszkolu ma charakter zajęć relaksacyjnych i
       ogólnorozwojowych. Dba o harmonijny rozwój dziecka wpływając na jego
@@ -35,7 +35,7 @@ activities:
       koordynacji ruchu oraz koncentrację uwagi uczestników.
   - id: sensoplastyka
     title: sensoplastyka
-    image: /przedszkole-blisko-dziecka-i-natury/assets/foto_zaj_dod_sensoplastyka.png
+    image: /assets/foto_zaj_dod_sensoplastyka.png
     text: >
       Sensoplastyka to zajęcia prowadzone w formie swobodnej, radosnej zabawy,
       bliskiej dziecięcej ciekawości i naturalnej potrzebie poznawania świata.
@@ -51,7 +51,7 @@ activities:
       Zajęcia prowadzone są raz w miesiącu dla dzieci wszystkich grup przez certyfikowanego trenera Sensoplastyki I stopnia.
   - id: rytmika
     title: rytmika
-    image: /przedszkole-blisko-dziecka-i-natury/assets/foto_zaj_dod_rytmika.png
+    image: /assets/foto_zaj_dod_rytmika.png
     text: >
       Celem zajęć jest rozbudzanie u dzieci miłości do muzyki poprzez śpiew,
       ruch, grę na instrumentach, taniec i improwizację. Program oparty jest na
@@ -61,7 +61,7 @@ activities:
       Podczas zajęć nie używa się słów, nie wydaje poleceń. Dzieci zanurzane są w melodie śpiewane w różnych skalach i metrach, współtworzą muzykę, proponują, doświadczają i eksperymentują.
   - id: arteterapia
     title: arteterapia
-    image: /przedszkole-blisko-dziecka-i-natury/assets/foto_zaj_dod_arteterapia.png
+    image: /assets/foto_zaj_dod_arteterapia.png
     text: >
       Nasza autorska arteterapia rozwojowa koncentruje się na wzmacnianiu
       autentycznego potencjału dziecka poprzez swobodną twórczość. W atmosferze
@@ -74,7 +74,7 @@ activities:
       W arteterapii sięgamy po autorskie narzędzia wspierające rozwój dziecka: grę rozwojową „Głaskotki" oraz książki Ewy Baranowskiej-Jojko, m.in. „Arteterapię przez cały rok" – zeszyt ćwiczeń i zabaw dla dzieci w wieku 5+, który rozwija życzliwość, wdzięczność i poczucie wspólnoty.
   - id: ceramika
     title: ceramika
-    image: /przedszkole-blisko-dziecka-i-natury/assets/foto_zaj_dod_ceramika.png
+    image: /assets/foto_zaj_dod_ceramika.png
     text: >
       Spotkania z ceramiką to kreatywne warsztaty sensoryczne rozwijające
       wyobraźnię i motorykę małą, kształtujące cierpliwość, wytrwałość i
@@ -85,7 +85,7 @@ activities:
       Podczas zajęć, oprócz zdolności motorycznych, rozwijamy także wytrwałość, umiejętność widzenia przestrzennego i pracy zespołowej. Dzieci są świadkami procesu, w którym z kawałka gliny tworzy się coś namacalnego i zachwycającego; we własnym tempie dochodzą do wniosku, że na piękny efekt końcowy warto poczekać.
   - id: zabawy-ze-sztuka
     title: zabawy ze sztuką
-    image: /przedszkole-blisko-dziecka-i-natury/assets/foto_zaj_dod_zabawy_ze_sztuka.png
+    image: /assets/foto_zaj_dod_zabawy_ze_sztuka.png
     text: >
       Kreatywne spotkania inspirowane wybranymi dziełami artystów, których
       sednem jest radość z odkrywania kolorów i ich znaczenia w samopoczuciu
@@ -96,7 +96,7 @@ activities:
       Podczas zajęć wspólnie podróżujemy przez świat technik wyrazu artystycznego, takich jak grafika, malarstwo, rzeźba i filcowanie. Kształtujemy wrażliwość na sztukę i rozwijamy ekspresję twórczą, pomagając dzieciom znaleźć odpowiednie dla siebie środki wyrazu.
   - id: zajecia-lesne
     title: leśne wędrowanie
-    image: /przedszkole-blisko-dziecka-i-natury/assets/foto_zaj_dod_lesne_wedrowanie.png
+    image: /assets/foto_zaj_dod_lesne_wedrowanie.png
     text: >-
       W naszym Leśnym Wędrowaniu las staje się przyjacielem dzieci, kompanem
       do zabawy i miejscem pełnym niespodzianek. Wędrujemy, zatrzymujemy się,
@@ -105,7 +105,7 @@ activities:
       W leśnej zieleni szukamy spokoju i inspiracji.
   - id: teatr
     title: teatr
-    image: /przedszkole-blisko-dziecka-i-natury/assets/foto_zaj_dod_teatr.png
+    image: /assets/foto_zaj_dod_teatr.png
     text: >-
       W naszym teatrze tworzymy przestrzeń do swobodnej zabawy, odkrywania
       i twórczego eksperymentowania. Rozwijamy świadomość ciała, ruchu i gestu,
@@ -114,7 +114,7 @@ activities:
       scenografię i pozwalamy wyobraźni prowadzić nas ku niezwykłym przygodom.
   - id: roztanczona-sztuka
     title: roztańczona sztuka
-    image: /przedszkole-blisko-dziecka-i-natury/assets/foto_zaj_dod_roztanczona_sztuka.png
+    image: /assets/foto_zaj_dod_roztanczona_sztuka.png
     text: >-
       To tu spotykają się ruch, obraz, kreska i wyobraźnia. Budzimy kreatywny
       ruch, tańczymy, a później tworzymy i eksperymentujemy. Poznajemy

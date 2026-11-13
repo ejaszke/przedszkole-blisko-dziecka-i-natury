@@ -1,6 +1,6 @@
 ---
 name: Aleksandra Wiechuła
-image: /przedszkole-blisko-dziecka-i-natury/assets/kadra_aleksandra_wiechula.png
+image: /assets/kadra_aleksandra_wiechula.png
 order: 1
 ---
 Jestem założycielką Przedszkola Blisko Dziecka i Natury – miejsca, które powstało z moich marzeń o pięknym dzieciństwie i uważnej edukacji najmłodszych dzieci. Podstawowe założenia placówki oddają to, co uważam za najważniejsze, czyli: pełną szacunku i zrozumienia relację dorosłych z dziećmi i ich rodzicami, a także kontakt z naturą i sztuką. Przedszkole to moje ukochane miejsce na Ziemi.

@@ -1,6 +1,6 @@
 ---
 name: Agnieszka Wiatr
-image: /przedszkole-blisko-dziecka-i-natury/assets/kadra_agnieszka_wiatr.png
+image: /assets/kadra_agnieszka_wiatr.png
 order: 9
 ---
 

@@ -1,6 +1,6 @@
 ---
 name: Basia Oduononwi
-image: /przedszkole-blisko-dziecka-i-natury/assets/kadra_basia_oduononwi.png
+image: /assets/kadra_basia_oduononwi.png
 order: 7
 ---
 

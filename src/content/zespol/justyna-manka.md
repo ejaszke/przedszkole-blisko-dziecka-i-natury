@@ -1,6 +1,6 @@
 ---
 name: Justyna Mańka
-image: /przedszkole-blisko-dziecka-i-natury/assets/kadra_justyna_manka.png
+image: /assets/kadra_justyna_manka.png
 order: 5
 ---
 

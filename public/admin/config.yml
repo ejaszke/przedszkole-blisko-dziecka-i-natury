@@ -5,10 +5,10 @@ backend:
 
 locale: pl
 
-# Uploady lądują w public/assets/uploads (repo). Ścieżka publiczna musi zawierać
-# prefix projektu (GitHub Pages Project) — inaczej podgląd w /admin nie znajdzie plików.
+# Uploady lądują w public/assets/uploads (repo). Pod własną domeną ścieżka
+# publiczna jest bez prefiksu projektu — strona serwuje assety z root.
 media_folder: public/assets/uploads
-public_folder: /przedszkole-blisko-dziecka-i-natury/assets/uploads
+public_folder: /assets/uploads
 
 collections:
   - name: zespol

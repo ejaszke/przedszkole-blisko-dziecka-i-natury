@@ -1,6 +1,6 @@
 ---
 name: Justyna Kasprzyk
-image: /przedszkole-blisko-dziecka-i-natury/assets/kadra_justyna_kasprzyk.png
+image: /assets/kadra_justyna_kasprzyk.png
 order: 21
 ---
 Jestem absolwentką pedagogiki przedszkolnej i wczesnoszkolnej na Uniwersytecie Śląskim w Katowicach. Praca z dziećmi jest dla mnie czymś więcej niż zawodem – to możliwość towarzyszenia dzieciom w poznawaniu świata, który z ich perspektywy potrafi być niezwykle ciekawy i pełen znaczeń. Bliska jest mi sentencja wypowiedziana przez Małego Księcia: *„Wszyscy dorośli byli kiedyś dziećmi, ale niewielu z nich pamięta o tym."* Dlatego istotne jest dla mnie, aby dostrzegać to, co jest ważne dla dziecka, i z otwartością uczestniczyć w jego małym-wielkim świecie.

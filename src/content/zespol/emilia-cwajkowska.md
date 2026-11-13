@@ -1,6 +1,6 @@
 ---
 name: Emilia Cwajkowska
-image: /przedszkole-blisko-dziecka-i-natury/assets/kadra_emilia_cwajkowska.png
+image: /assets/kadra_emilia_cwajkowska.png
 order: 20
 ---
 Jestem absolwentką studiów licencjackich i magisterskich na kierunku logopedia na Uniwersytecie Śląskim. W pracy z dziećmi szczególnie cenię możliwość wspierania ich indywidualnego rozwoju oraz obserwowania postępów, jakie osiągają w obszarze mowy i komunikacji.

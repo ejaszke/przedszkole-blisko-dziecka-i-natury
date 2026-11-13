@@ -1,6 +1,6 @@
 ---
 hero_h1: "polityka<br>prywatności"
-hero_image: /przedszkole-blisko-dziecka-i-natury/materialy/cennik i polityka/polityka prywatnosci_w_menu.jpg
+hero_image: /materialy/cennik i polityka/polityka prywatnosci_w_menu.jpg
 main_title: "polityka prywatności<br>i wykorzystywania plików cookies"
 ---
 

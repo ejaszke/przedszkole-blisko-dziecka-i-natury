@@ -1,6 +1,6 @@
 ---
 hero_h1: "rekrutacja<br>i cennik"
-hero_image: /przedszkole-blisko-dziecka-i-natury/materialy/cennik i polityka/cennik_w_menu.jpg
+hero_image: /materialy/cennik i polityka/cennik_w_menu.jpg
 rekrutacja_text: |
   W miarę wolnych miejsc prowadzimy nabór w ciągu całego roku. Zapraszamy do kontaktu telefonicznego [690 670 836](tel:690670836) lub mailowego: [biuro@bliskodzieckainatury.pl](mailto:biuro@bliskodzieckainatury.pl).
 cennik_intro: "Cennik na rok szkolny 2026/2027:"
